@@ -9,23 +9,31 @@ public class MoveObjMagic : MonoBehaviour
     {
 
     }
-
+	public GameObject _bullet;
 
     Vector3 _camera2Mouse;
+	void Update()
+	{
+		//　マウスの左クリックで撃つ
+		if (Input.GetButtonDown("Fire1"))
+		{
+			Shot();
+		}
+	}
 
-    // Update is called once per frame
-    void Update()
-    {
-    }
+	//　敵を撃つ
+	void Shot()
+	{ 
+		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+		RaycastHit hit;
+		Debug.Log(ray);
+		Instantiate(_bullet);
+		BulletMove obj = _bullet.GetComponent<BulletMove>();
+		obj.v = Vector3.Normalize(ray.direction)/100;
 
-
-    private Vector3 MouseRay2Object()
-    {
-
-        Camera.main.transform.position = _camera2Mouse;
-        Ray _ray;
-        _ray.origin = Camera.main.transform.position;
-    
-        return new Vector3();
-    }
+		if (Physics.Raycast(ray, out hit, 100f, LayerMask.GetMask("Enemy")))
+		{
+			Destroy(hit.collider.gameObject);
+		}
+	}
 }

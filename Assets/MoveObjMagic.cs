@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -36,7 +36,7 @@ public class MoveObjMagic : MonoBehaviour
 		}
 
 
-		//@ƒ}ƒEƒX‚Ì¶ƒNƒŠƒbƒN‚ÅŒ‚‚Â
+		//ã€€ãƒã‚¦ã‚¹ã®å·¦ã‚¯ãƒªãƒƒã‚¯ã§æ’ƒã¤
 		if (Input.GetButtonDown("Fire1"))
 		{
 			

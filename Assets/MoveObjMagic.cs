@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MoveObjMagic : MonoBehaviour
 {
+	[SerializeField] LayerMask _layerMask;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,26 +16,33 @@ public class MoveObjMagic : MonoBehaviour
     Vector3 _camera2Mouse;
 	void Update()
 	{
+		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+		RaycastHit hit;
+		Debug.DrawRay(Camera.main.transform.position, ray.direction * 100f, Color.green);
+		if (Physics.Raycast(ray, out hit, 100f, _layerMask))
+		{
+
+			Debug.Log(ray);
+			Debug.Log(hit);
+
+
+			//Destroy(hit.collider.gameObject);
+			Gimmick g = hit.collider.gameObject.GetComponent<Gimmick>();
+			Debug.Log(g.transform);
+			if (g)
+            {
+				g.ChangeColor();
+            }
+		}
+
+
 		//　マウスの左クリックで撃つ
 		if (Input.GetButtonDown("Fire1"))
 		{
-			Shot();
+			
 		}
 	}
 
-	//　敵を撃つ
-	void Shot()
-	{ 
-		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-		RaycastHit hit;
-		Debug.Log(ray);
-		Instantiate(_bullet);
-		BulletMove obj = _bullet.GetComponent<BulletMove>();
-		obj.v = Vector3.Normalize(ray.direction)/100;
 
-		if (Physics.Raycast(ray, out hit, 100f, LayerMask.GetMask("Enemy")))
-		{
-			Destroy(hit.collider.gameObject);
-		}
-	}
+
 }

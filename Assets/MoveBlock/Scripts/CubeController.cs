@@ -8,6 +8,14 @@ public class CubeController : MonoBehaviour
     Vector3 prevPos;
 
     [SerializeField] float step = 2f;
+    bool _isSelected = false;
+
+    public bool IsSelect
+    {
+        get { return _isSelected; }
+        set { _isSelected = value; }
+   
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +27,7 @@ public class CubeController : MonoBehaviour
     void Update()
     {
         // ‡@ ˆÚ“®’†‚©‚Ç‚¤‚©‚Ì”»’èBˆÚ“®’†‚Å‚È‚¯‚ê‚Î“ü—Í‚ğó•t
-        if (transform.position == target)
+        if (transform.position == target && _isSelected)
         {
             SetTargetPosition();
         }

@@ -23,15 +23,17 @@ public class MoveObjMagic : MonoBehaviour
 			if (g)
             {
 				g.ChangeColor();
-            }
-		}
 
 
-		//　マウスの左クリックで撃つ
-		if (Input.GetButtonDown("Fire1"))
-		{
-			
+
+				//　マウスの左クリックで撃つ
+				if (Input.GetButtonDown("Fire1"))
+				{
+					g.IsSelect = true;
+				}
+			}
 		}
+
 	}
 
 

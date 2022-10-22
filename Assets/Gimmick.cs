@@ -5,10 +5,19 @@ using UnityEngine;
 public class Gimmick : MonoBehaviour
 {
     [SerializeField] Material _focusMat;
+    [SerializeField] Material _selectedMat;
     [SerializeField] float _interval = 2f;
     Material _original;
     Renderer _renderer;
     float _timer;
+
+    bool _isSelect = false;
+
+    public bool IsSelect
+    {
+        get { return _isSelect; }
+        set { _isSelect = value; }
+    }
 
     void Start()
     {
@@ -19,14 +28,23 @@ public class Gimmick : MonoBehaviour
 
     void Update()
     {
-        if (_timer > 0)
+        if (!_isSelect)
         {
-            _timer -= Time.deltaTime;
 
-            if (_timer < 0)
+            if (_timer > 0)
             {
-                _renderer.material = _original;
+                _timer -= Time.deltaTime;
+
+                if (_timer < 0)
+                {
+                    _renderer.material = _original;
+                }
             }
+        }
+        else
+        {
+            _renderer.material = _selectedMat;
+            Controll();
         }
     }
 
@@ -39,7 +57,10 @@ public class Gimmick : MonoBehaviour
 
     public void Controll()
     {
-
-
+        CubeController cubeController = GetComponent<CubeController>();
+        if(cubeController != null)
+        {
+            cubeController.IsSelect = _isSelect;
+        }
     }
 }

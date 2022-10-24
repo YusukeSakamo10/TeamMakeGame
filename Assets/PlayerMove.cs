@@ -8,19 +8,35 @@ public class PlayerMove : MonoBehaviour
     Rigidbody _rb;
     float h;
     float v;
-    // Start is called before the first frame update
+    float y;
+    public float _jumpPower = 10;
+    [SerializeField] LayerMask _layerMask;
+    public float groundFlow = 3.3f;
+
     void Start()
     {
         _rb = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         h = Input.GetAxisRaw("Horizontal");
         v = Input.GetAxisRaw("Vertical");
+        y = Input.GetAxisRaw("Jump");
 
-        _rb.AddForce((Vector3.forward * v + Vector3.right * h).normalized * _power);
+        Vector3 rayPosition = new(transform.position.x, transform.position.y + 3, transform.position.z);
+
+        Ray ray = new Ray(rayPosition, new Vector3(0, -1, 0));
+        RaycastHit hit;
+
+        Debug.DrawRay(rayPosition, ray.direction * groundFlow, Color.green);
+     
+        if (Physics.Raycast(ray,out hit, groundFlow, _layerMask))
+        {
+            _rb.AddForce((Vector3.up * y).normalized * _jumpPower);
+        }
+
+        _rb.AddForce((Vector3.forward * v + Vector3.right * h).normalized * _power);    
     }
 
     void FixedUpdate()
@@ -33,7 +49,7 @@ public class PlayerMove : MonoBehaviour
         Vector3 moveForward = cameraForward * v + Camera.main.transform.right * h;
 
         // 移動方向にスピードを掛ける。ジャンプや落下がある場合は、別途Y軸方向の速度ベクトルを足す。
-        _rb.velocity = moveForward * _power + new Vector3(0, _rb.velocity.y, 0);
+        _rb.velocity = Vector3.Normalize(moveForward) * _power + new Vector3(0, _rb.velocity.y, 0);
 
         // キャラクターの向きを進行方向に
         if (moveForward != Vector3.zero)

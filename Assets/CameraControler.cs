@@ -38,15 +38,15 @@ public class CameraControler : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            normalCamera.SetActive(false);
-            pickCamera.SetActive(true);
-            XpCamera.SetActive(false);
-            XmCamera.SetActive(false);
-            YpCamera.SetActive(false);
-            YmCamera.SetActive(false);
-        }
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    normalCamera.SetActive(false);
+        //    pickCamera.SetActive(true);
+        //    XpCamera.SetActive(false);
+        //    XmCamera.SetActive(false);
+        //    YpCamera.SetActive(false);
+        //    YmCamera.SetActive(false);
+        //}
 
         if (Input.GetKeyDown(KeyCode.K))
         {

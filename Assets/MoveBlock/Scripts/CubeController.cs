@@ -8,6 +8,8 @@ public class CubeController : MonoBehaviour
     Vector3 prevPos;
 
     [SerializeField] float step = 2f;
+    [SerializeField] float distance = 1;
+
     bool _isSelected = false;
 
     public bool IsSelect
@@ -44,7 +46,7 @@ public class CubeController : MonoBehaviour
 
         prevPos = target;
         
-        target = transform.position +dir;
+        target = transform.position +dir * distance;
       
     }
     // ‡B –Ú“I’n‚ÖˆÚ“®‚·‚é
@@ -52,5 +54,6 @@ public class CubeController : MonoBehaviour
     {
         transform.position = Vector3.MoveTowards(transform.position, target, step * Time.deltaTime);
     }
+
 
 }

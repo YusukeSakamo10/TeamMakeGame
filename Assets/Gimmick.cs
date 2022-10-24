@@ -12,7 +12,7 @@ public class Gimmick : MonoBehaviour
     float _timer;
 
     bool _isSelect = false;
-
+    bool _isCancel = false;
     public bool IsSelect
     {
         get { return _isSelect; }
@@ -57,10 +57,21 @@ public class Gimmick : MonoBehaviour
 
     public void Controll()
     {
+        if (_isCancel)
+        {
+            _isSelect = false;
+            _isCancel = false;
+        }
         CubeController cubeController = GetComponent<CubeController>();
         if(cubeController != null)
         {
             cubeController.IsSelect = _isSelect;
         }
+        
+    }
+
+    public void SelectCancel()
+    {
+        _isCancel = true;
     }
 }

@@ -356,7 +356,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 260103158}
-  m_LocalRotation: {x: 0.26431358, y: -0.005505913, z: 0.0015089769, w: 0.9644199}
+  m_LocalRotation: {x: 0.26431358, y: -0.0055058794, z: 0.0015089677, w: 0.9644199}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -582,6 +582,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _power: 10
+  _jumpPower: 40
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  groundFlow: 3.3
 --- !u!54 &439441392
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -865,6 +870,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   step: 2
+  distance: 1
 --- !u!1 &479381252
 GameObject:
   m_ObjectHideFlags: 0
@@ -1842,7 +1848,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.20668462, y: -0.0055856835, z: 0.001179973, w: 0.978391}
+  m_LocalRotation: {x: 0.20668463, y: -0.0055856425, z: 0.0011799644, w: 0.978391}
   m_LocalPosition: {x: -1.5486377, y: 6.01, z: -2.860222}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2023,6 +2029,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   step: 2
+  distance: 1
 --- !u!1 &1094906419
 GameObject:
   m_ObjectHideFlags: 0
@@ -2285,6 +2292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   step: 2
+  distance: 1
 --- !u!1 &1164446858
 GameObject:
   m_ObjectHideFlags: 0
@@ -2545,6 +2553,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   step: 2
+  distance: 1
 --- !u!1 &1267936496
 GameObject:
   m_ObjectHideFlags: 0
@@ -2672,6 +2681,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   step: 2
+  distance: 1
 --- !u!1001 &1299322856
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2798,7 +2808,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1302064952}
-  m_LocalRotation: {x: 0.20668459, y: -0.005585683, z: 0.0011799727, w: 0.978391}
+  m_LocalRotation: {x: 0.2066846, y: -0.0055856532, z: 0.0011799665, w: 0.978391}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3455,6 +3465,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   step: 2
+  distance: 1
 --- !u!1 &1955927782
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,7 +5,7 @@ using UnityEngine;
 public class CubeController : MonoBehaviour
 {
     Vector3 target;
-    Vector3 prevPos;
+    //Vector3 prevPos;
 
     [SerializeField] float step = 2f;
     [SerializeField] float distance = 1;
@@ -44,11 +44,20 @@ public class CubeController : MonoBehaviour
 
         Vector3 dir = new Vector3(h, 0, v);
 
-        prevPos = target;
+        //prevPos = target;
         
-        target = transform.position +dir * distance;
+        target = transform.position + dir * distance;
       
     }
+
+    //public void Forward()
+    //{
+    //    Vector3 dir = new Vector3(0, 0, 1);
+
+    //    target = transform.position + dir * distance;
+    //}
+
+
     // ‡B –Ú“I’n‚ÖˆÚ“®‚·‚é
     void Move()
     {

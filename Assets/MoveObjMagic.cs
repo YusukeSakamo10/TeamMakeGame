@@ -22,6 +22,8 @@ public class MoveObjMagic : MonoBehaviour
 		if (Physics.Raycast(ray, out hit, 100f, _layerMask))
 		{
 			Gimmick g = hit.collider.gameObject.GetComponent<Gimmick>();
+			Transform pos = hit.collider.gameObject.GetComponent<Transform>();
+
 			if (g)
             {
 				g.ChangeColor();

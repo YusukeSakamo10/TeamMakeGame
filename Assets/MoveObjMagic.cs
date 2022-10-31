@@ -5,12 +5,20 @@ using UnityEngine.UI;
 
 public class MoveObjMagic : MonoBehaviour
 {
+	ObjectCameraController obj;
 	[SerializeField] LayerMask _layerMask;
 	Button button;
-    // Start is called before the first frame update
-    void Start()
+	public float rayDist = 18;
+
+	public Button _Up;
+	public Button _Down;
+	public Button _Left;
+	public Button _Right;
+	// Start is called before the first frame update
+	void Start()
     {
 		Button b = GameObject.Find("Cancel").GetComponent<Button>();
+		obj = GameObject.Find("ObjectCAM").GetComponent<ObjectCameraController>();
 		if(b != null)	button = b.GetComponent<Button>();
 	}
 
@@ -18,32 +26,36 @@ public class MoveObjMagic : MonoBehaviour
 	{
 		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 		RaycastHit hit;
-		Debug.DrawRay(Camera.main.transform.position, ray.direction * 100f, Color.green);
-		if (Physics.Raycast(ray, out hit, 100f, _layerMask))
+		Debug.DrawRay(Camera.main.transform.position, ray.direction * rayDist, Color.green);
+		if (Physics.Raycast(ray, out hit, rayDist, _layerMask))
 		{
 			Gimmick g = hit.collider.gameObject.GetComponent<Gimmick>();
 			Transform pos = hit.collider.gameObject.GetComponent<Transform>();
-
+			CubeController _cube = hit.collider.gameObject.GetComponent<CubeController>();
 			if (g)
             {
 				g.ChangeColor();
-
-
 
 				//　マウスの左クリックで撃つ
 				if (Input.GetButtonDown("Fire1"))
 				{
 					g.IsSelect = true;
 					if(button)button.onClick.AddListener(g.SelectCancel);
+					obj.SelectObj = g.gameObject;
+					if (_Up)_Up.onClick.AddListener(_cube.Forward);
+					if (_Down) _Down.onClick.AddListener(_cube.Backward);
+					if (_Right) _Right.onClick.AddListener(_cube.Right);
+					if (_Left) _Left.onClick.AddListener(_cube.Left);
 				}
 
-
 			}
-			
 		}
 
 	}
 
-
+	public void ObjFocusCameraClear()
+    {
+		obj.SelectObj = null;
+	}
 
 }

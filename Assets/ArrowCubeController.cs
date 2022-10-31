@@ -2,21 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CubeController : MonoBehaviour
+public class ArrowCubeController : MonoBehaviour
 {
     Vector3 target;
     //Vector3 prevPos;
 
     [SerializeField] float step = 2f;
     [SerializeField] float distance = 1;
-
+    
     bool _isSelected = false;
 
     public bool IsSelect
     {
         get { return _isSelected; }
         set { _isSelected = value; }
-   
+
     }
 
     // Start is called before the first frame update
@@ -44,10 +44,8 @@ public class CubeController : MonoBehaviour
 
         Vector3 dir = new Vector3(h, 0, v);
 
-        //prevPos = target;
-        
         target = transform.position + dir * distance;
-      
+
     }
 
     public void Forward()
@@ -74,6 +72,7 @@ public class CubeController : MonoBehaviour
 
         target = transform.position + dir * distance;
     }
+
 
     // ‡B –Ú“I’n‚ÖˆÚ“®‚·‚é
     void Move()

@@ -52,27 +52,39 @@ public class CubeController : MonoBehaviour
 
     public void Forward()
     {
-        Vector3 dir = new Vector3(0, 0, 1);
+        if (transform.position == target && _isSelected)
+        {
+            Vector3 dir = new Vector3(0, 0, 1);
 
-        target = transform.position + dir * distance;
+            target = transform.position + dir * distance;
+        }
     }
     public void Backward()
     {
-        Vector3 dir = new Vector3(0, 0, -1);
+        if (transform.position == target && _isSelected)
+        {
+            Vector3 dir = new Vector3(0, 0, -1);
 
-        target = transform.position + dir * distance;
+            target = transform.position + dir * distance;
+        }
     }
     public void Left()
     {
-        Vector3 dir = new Vector3(-1, 0, 0);
+        if (transform.position == target && _isSelected)
+        {
+            Vector3 dir = new Vector3(-1, 0, 0);
 
-        target = transform.position + dir * distance;
+            target = transform.position + dir * distance;
+        }
     }
     public void Right()
     {
-        Vector3 dir = new Vector3(1, 0, 0);
+        if (transform.position == target && _isSelected)
+        {
+            Vector3 dir = new Vector3(1, 0, 0);
 
-        target = transform.position + dir * distance;
+            target = transform.position + dir * distance;
+        }
     }
 
     // ‡B –Ú“I’n‚ÖˆÚ“®‚·‚é

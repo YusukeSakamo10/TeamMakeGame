@@ -14,9 +14,21 @@ public class MoveObjMagic : MonoBehaviour
 	public Button _Down;
 	public Button _Left;
 	public Button _Right;
-	// Start is called before the first frame update
+
+	Vector3 _Position;
+	public Vector3 Position
+	{
+		get { return _Position; }
+		set { _Position = value; }
+	}
+
+	PlayerMove _Player;
+
 	void Start()
     {
+		PlayerMove p = GameObject.Find("player").GetComponent<PlayerMove>();
+		if (p != null) _Player = p.GetComponent<PlayerMove>();
+
 		Button b = GameObject.Find("Cancel").GetComponent<Button>();
 		obj = GameObject.Find("ObjectCAM").GetComponent<ObjectCameraController>();
 		if(b != null)	button = b.GetComponent<Button>();
@@ -39,6 +51,9 @@ public class MoveObjMagic : MonoBehaviour
 				//　マウスの左クリックで撃つ
 				if (Input.GetButtonDown("Fire1"))
 				{
+					_Position = g.gameObject.transform.position;
+					_Player.IsMove = false;
+
 					g.IsSelect = true;
 					if(button)button.onClick.AddListener(g.SelectCancel);
 					obj.SelectObj = g.gameObject;

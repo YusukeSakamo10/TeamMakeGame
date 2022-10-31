@@ -8,7 +8,7 @@ public class CubeController : MonoBehaviour
     //Vector3 prevPos;
 
     [SerializeField] float step = 2f;
-    [SerializeField] float distance = 1;
+    [SerializeField] float distance = 2;
 
     bool _isSelected = false;
 

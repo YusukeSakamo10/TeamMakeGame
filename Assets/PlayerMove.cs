@@ -13,6 +13,14 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] LayerMask _layerMask;
     public float groundFlow = 3.3f;
 
+    bool _isMove = true;
+
+    public bool IsMove
+    {
+        get { return _isMove; }
+        set { _isMove = value; }
+    }
+
     void Start()
     {
         _rb = GetComponent<Rigidbody>();
@@ -20,9 +28,12 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
-        h = Input.GetAxisRaw("Horizontal");
-        v = Input.GetAxisRaw("Vertical");
-        y = Input.GetAxisRaw("Jump");
+        if (_isMove)
+        {
+            h = Input.GetAxisRaw("Horizontal");
+            v = Input.GetAxisRaw("Vertical");
+            y = Input.GetAxisRaw("Jump");
+        }
 
         Vector3 rayPosition = new(transform.position.x, transform.position.y + 3, transform.position.z);
 
@@ -36,7 +47,18 @@ public class PlayerMove : MonoBehaviour
             _rb.AddForce((Vector3.up * y).normalized * _jumpPower);
         }
 
-        _rb.AddForce((Vector3.forward * v + Vector3.right * h).normalized * _power);    
+        _rb.AddForce((Vector3.forward * v + Vector3.right * h).normalized * _power);
+
+        //ÉLÅ[Ç™âüÇ≥ÇÍÇƒÇ¢Ç»Ç¢Ç∆Ç´ÉJÉÅÉâÇÃï˚å¸Çå¸Ç≠
+        if (h == 0 && v == 0 && y == 0)
+        {
+            Vector3 cameraForward = Vector3.Scale(Camera.main.transform.forward, new Vector3(1, 0, 1)).normalized;
+
+            transform.rotation = Quaternion.LookRotation(cameraForward);
+        }
+
+        _rb.AddForce((Vector3.forward * v + Vector3.right * h).normalized * _power);
+
     }
 
     void FixedUpdate()

@@ -6,7 +6,7 @@ public class Gimmick : MonoBehaviour
 {
     [SerializeField] Material _focusMat;
     [SerializeField] Material _selectedMat;
-    [SerializeField] float _interval = 2f;
+    [SerializeField] float _interval = 0.5f;
     Material _original;
     Renderer _renderer;
     float _timer;

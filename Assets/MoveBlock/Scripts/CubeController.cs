@@ -10,13 +10,13 @@ public class CubeController : MonoBehaviour
     [SerializeField] float step = 2f;
     [SerializeField] float distance = 2;
 
-    bool _isSelected = false;
+    [SerializeField] bool _isSelected = false;
 
     public bool IsSelect
     {
         get { return _isSelected; }
         set { _isSelected = value; }
-   
+
     }
 
     // Start is called before the first frame update
@@ -92,6 +92,4 @@ public class CubeController : MonoBehaviour
     {
         transform.position = Vector3.MoveTowards(transform.position, target, step * Time.deltaTime);
     }
-
-
 }

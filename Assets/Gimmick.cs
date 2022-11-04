@@ -12,7 +12,7 @@ public class Gimmick : MonoBehaviour
     float _timer;
 
     bool _isSelect = false;
-    bool _isCancel = false;
+    public bool _isCancel = false;
     public bool IsSelect
     {
         get { return _isSelect; }
@@ -59,6 +59,9 @@ public class Gimmick : MonoBehaviour
     {
         if (_isCancel)
         {
+            Debug.Log("Flag" + _isCancel);
+            PlayerMove p = GameObject.Find("player").GetComponent<PlayerMove>();
+            p.IsMove = true;
             _isSelect = false;
             _isCancel = false;
         }

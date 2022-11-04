@@ -51,21 +51,18 @@ public class MoveObjMagic : MonoBehaviour
 				//　マウスの左クリックで撃つ
 				if (Input.GetButtonDown("Fire1"))
 				{
-					_Position = g.gameObject.transform.position;
 					_Player.IsMove = false;
 
 					g.IsSelect = true;
-					if(button)button.onClick.AddListener(g.SelectCancel);
-					obj.SelectObj = g.gameObject;
+                    if (button) button.onClick.AddListener(g.SelectCancel);
+                    obj.SelectObj = g.gameObject;
 					if (_Up)_Up.onClick.AddListener(_cube.Forward);
 					if (_Down) _Down.onClick.AddListener(_cube.Backward);
 					if (_Right) _Right.onClick.AddListener(_cube.Right);
 					if (_Left) _Left.onClick.AddListener(_cube.Left);
 				}
-
 			}
 		}
-
 	}
 
 	public void ObjFocusCameraClear()

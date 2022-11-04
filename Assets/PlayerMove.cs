@@ -34,6 +34,7 @@ public class PlayerMove : MonoBehaviour
             v = Input.GetAxisRaw("Vertical");
             y = Input.GetAxisRaw("Jump");
         }
+        else { h = 0; v = 0; y = 0; }
 
         Vector3 rayPosition = new(transform.position.x, transform.position.y + 3, transform.position.z);
 

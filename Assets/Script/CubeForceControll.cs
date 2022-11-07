@@ -5,7 +5,7 @@ using UnityEngine;
 public class CubeForceControll : MonoBehaviour
 {
     Vector3 target = Vector3.zero;
-    Rigidbody _rb;
+    public Rigidbody _rb;
 
     [SerializeField] float distance = 2;
 
@@ -70,11 +70,6 @@ public class CubeForceControll : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        Reset();
-    }
-
     // ‡A “ü—Í‚É‰‚¶‚ÄˆÚ“®Œã‚ÌˆÊ’u‚ğZo
     void SetTargetPosition()
     {
@@ -109,7 +104,7 @@ public class CubeForceControll : MonoBehaviour
         rightFlag = false;
         backFlag = false;
         leftFlag = false;
-        timer = 0;
+        timer = 2000;
         _rb.velocity = Vector3.zero;
     }
 }

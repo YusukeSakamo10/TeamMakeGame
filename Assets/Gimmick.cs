@@ -65,12 +65,7 @@ public class Gimmick : MonoBehaviour
             _isSelect = false;
             _isCancel = false;
         }
-        CubeForceControll cubeController = GetComponent<CubeForceControll>();
-        if(cubeController != null)
-        {
-            cubeController.IsSelect = _isSelect;
-        }
-        
+
     }
 
     public void SelectCancel()

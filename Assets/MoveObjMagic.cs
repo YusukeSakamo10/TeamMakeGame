@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class MoveObjMagic : MonoBehaviour
 {
 	ObjectCameraController obj;
+	CubeForceControll _saveCube;
 	[SerializeField] LayerMask _layerMask;
 	Button button;
 	public float rayDist = 18;
@@ -42,7 +43,6 @@ public class MoveObjMagic : MonoBehaviour
 		if (Physics.Raycast(ray, out hit, rayDist, _layerMask))
 		{
 			Gimmick g = hit.collider.gameObject.GetComponent<Gimmick>();
-			Transform pos = hit.collider.gameObject.GetComponent<Transform>();
 			CubeForceControll _cube = hit.collider.gameObject.GetComponent<CubeForceControll>();
 			if (g)
             {
@@ -56,10 +56,14 @@ public class MoveObjMagic : MonoBehaviour
 					g.IsSelect = true;
                     if (button) button.onClick.AddListener(g.SelectCancel);
                     obj.SelectObj = g.gameObject;
+					_cube.IsSelect = true;
+					_saveCube = _cube;
+					//矢印にオブジェクトごとの操作を割り当てる
 					if (_Up)_Up.onClick.AddListener(_cube.Forward);
 					if (_Down) _Down.onClick.AddListener(_cube.Backward);
 					if (_Right) _Right.onClick.AddListener(_cube.Right);
 					if (_Left) _Left.onClick.AddListener(_cube.Left);
+					
 				}
 			}
 		}
@@ -68,6 +72,11 @@ public class MoveObjMagic : MonoBehaviour
 	public void ObjFocusCameraClear()
     {
 		obj.SelectObj = null;
+		if (_saveCube)
+		{
+			_saveCube.IsSelect = false;
+			_saveCube = null;
+		}
 	}
 
 }

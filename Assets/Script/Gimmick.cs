@@ -10,6 +10,7 @@ public class Gimmick : MonoBehaviour
     Material _original;
     Renderer _renderer;
     float _timer;
+    GameObject _gameManager;
 
     bool _isSelect = false;
     public bool _isCancel = false;
@@ -21,6 +22,7 @@ public class Gimmick : MonoBehaviour
 
     void Start()
     {
+        _gameManager = GameObject.Find("GameManager").GetComponent<GameObject>();
         _renderer = GetComponent<Renderer>();
         _original = _renderer.material;
     }
@@ -57,6 +59,8 @@ public class Gimmick : MonoBehaviour
 
     public void Controll()
     {
+        CubeForceControll cubeController = GetComponent<CubeForceControll>();
+
         if (_isCancel)
         {
             Debug.Log("Flag" + _isCancel);
@@ -64,8 +68,9 @@ public class Gimmick : MonoBehaviour
             p.IsMove = true;
             _isSelect = false;
             _isCancel = false;
+            cubeController._rb.isKinematic = true;
+            //_Up.onClick.removeEventListener(cubeController.Forward);
         }
-        CubeForceControll cubeController = GetComponent<CubeForceControll>();
         if(cubeController != null)
         {
             cubeController.IsSelect = _isSelect;

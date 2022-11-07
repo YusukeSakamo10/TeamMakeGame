@@ -53,6 +53,7 @@ public class MoveObjMagic : MonoBehaviour
 				{
 					_Player.IsMove = false;
 
+					_cube._rb.isKinematic = false;
 					g.IsSelect = true;
                     if (button) button.onClick.AddListener(g.SelectCancel);
                     obj.SelectObj = g.gameObject;

@@ -115,6 +115,7 @@ MonoBehaviour:
   _focusMat: {fileID: 2100000, guid: 0b406c6650aadb447bf7f679845f8395, type: 2}
   _selectedMat: {fileID: 2100000, guid: 20a892e6ff64aaa4b84c1d3b764eb8d7, type: 2}
   _interval: 0.5
+  _isCancel: 0
 --- !u!114 &5101815515617593529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,6 +130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   step: 2
   distance: 1
+  _isSelected: 0
 --- !u!114 &8579419528612505745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,5 +144,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RayLange: 1
-  RayNum: 0
-  RayY: 0
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  _Up: {fileID: 0}
+  _Down: {fileID: 0}
+  _Left: {fileID: 0}
+  _Right: {fileID: 0}
+  _Cube: {fileID: 0}

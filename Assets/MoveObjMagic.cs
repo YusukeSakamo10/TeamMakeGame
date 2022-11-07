@@ -43,7 +43,7 @@ public class MoveObjMagic : MonoBehaviour
 		{
 			Gimmick g = hit.collider.gameObject.GetComponent<Gimmick>();
 			Transform pos = hit.collider.gameObject.GetComponent<Transform>();
-			CubeController _cube = hit.collider.gameObject.GetComponent<CubeController>();
+			CubeForceControll _cube = hit.collider.gameObject.GetComponent<CubeForceControll>();
 			if (g)
             {
 				g.ChangeColor();

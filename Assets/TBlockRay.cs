@@ -12,7 +12,8 @@ public class TBlockRay : MonoBehaviour
     [SerializeField] GameObject _Left;
     [SerializeField] GameObject _Right;
     [SerializeField] CubeController _Cube;
-
+    private Ray[] rayForward;
+    private Ray[] rayBack;
 
     void Start()
     {
@@ -30,15 +31,32 @@ public class TBlockRay : MonoBehaviour
             Debug.DrawRay(rayPosition + new Vector3(0, transform.position.y * 2,0), transform.right * RayLangeZ, Color.red);
             Debug.DrawRay(rayPosition + new Vector3(0, transform.position.y * 2,0), -transform.right * RayLangeZ, Color.red);
 
+            Debug.DrawRay(rayPosition + new Vector3(0, transform.position.y * 2, 0), transform.forward * RayLangeZ, Color.red);
+            Debug.DrawRay(rayPosition + new Vector3(0, transform.position.y * 2, 0), -transform.forward * RayLangeZ, Color.red);
+            
             for (int i = -1; i < 2; i++)
             {
-                Debug.DrawRay(rayPosition + new Vector3(transform.position.x * (i * 2),0,0), transform.forward * RayLangeZ, Color.red);
-                Debug.DrawRay(rayPosition + new Vector3(transform.position.x * (i * 2),0,0), -transform.forward * RayLangeZ, Color.red);
+                Debug.DrawRay(rayPosition + new Vector3((i * 2), 0, 0), transform.forward * RayLangeZ, Color.red);
+                Debug.DrawRay(rayPosition + new Vector3((i * 2), 0, 0), -transform.forward * RayLangeZ, Color.red);
+
+                rayForward[i + 1] = new Ray(rayPosition + new Vector3((-i * 2), 0, 0), transform.forward);
+                rayBack[i + 1] = new Ray(rayPosition + new Vector3((i * 2), 0, 0), -transform.forward);
+
+                if (Physics.Raycast(rayForward[i + 1], RayLangeZ, _layerMask))
+                {
+                    _Up.SetActive(false);
+                }
+                else _Up.SetActive(true);
+                if (Physics.Raycast(rayBack[i + 1], RayLangeZ, _layerMask))
+                {
+                    _Down.SetActive(false);
+                }
+                else _Down.SetActive(true);
             }
 
             //Ray rayRight = new Ray(rayPosition, transform.right);
             //Ray rayLeft = new Ray(rayPosition, -transform.right);
-            //Ray rayForward = new Ray(rayPosition, transform.forward);
+
             //Ray rayBack = new Ray(rayPosition, -transform.forward);
 
             //if (Physics.Raycast(rayRight, RayLange, _layerMask))
@@ -51,16 +69,7 @@ public class TBlockRay : MonoBehaviour
             //    _Left.SetActive(false);
             //}
             //else _Left.SetActive(true);
-            //if (Physics.Raycast(rayForward, RayLange, _layerMask))
-            //{
-            //    _Up.SetActive(false);
-            //}
-            //else _Up.SetActive(true);
-            //if (Physics.Raycast(rayBack, RayLange, _layerMask))
-            //{
-            //    _Down.SetActive(false);
-            //}
-            //else _Down.SetActive(true);
+
         }
     }
 }

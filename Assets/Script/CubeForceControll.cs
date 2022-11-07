@@ -5,7 +5,13 @@ using UnityEngine;
 public class CubeForceControll : MonoBehaviour
 {
     Vector3 target = Vector3.zero;
-    public Rigidbody _rb;
+    [SerializeField] Rigidbody _rb;
+
+    public Rigidbody Rb
+    {
+        get { return _rb; }
+        set { _rb = value; }
+    }
 
     [SerializeField] float distance = 2;
 

@@ -30,7 +30,6 @@ public class ObjectCameraController : MonoBehaviour
             {
                 _vCam.Follow = _selecteObj.transform;
                 time--;
-                Debug.Log("Time" + time);
             }
             else
             {

@@ -52,6 +52,9 @@ public class CubeForceControll : MonoBehaviour
                 dir = new Vector3(0, 0, 0);
             }
         }
+
+
+
         /*
                 switch (_direction)
                 {

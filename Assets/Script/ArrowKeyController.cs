@@ -8,9 +8,9 @@ public class ArrowKeyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space)){
+        //if (Input.GetKeyDown(KeyCode.Space)){
 
-            this.transform.rotation = new Quaternion(0, 0, Camera.main.transform.rotation.y, 0);
-        } 
+        //    this.transform.rotation = new Quaternion(0, 0, Camera.main.transform.rotation.y, 0);
+        //} 
     }
 }

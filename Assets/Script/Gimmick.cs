@@ -68,7 +68,6 @@ public class Gimmick : MonoBehaviour
             p.IsMove = true;
             _isSelect = false;
             _isCancel = false;
-            cubeController.Rb.isKinematic = true;
             //_Up.onClick.removeEventListener(cubeController.Forward);
         }
         if(cubeController != null)

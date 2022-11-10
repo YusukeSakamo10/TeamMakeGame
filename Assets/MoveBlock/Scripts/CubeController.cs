@@ -5,7 +5,6 @@ using UnityEngine;
 public class CubeController : MonoBehaviour
 {
     Vector3 target;
-    //Vector3 prevPos;
 
     [SerializeField] float step = 2f;
     [SerializeField] float distance = 2;

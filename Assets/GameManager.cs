@@ -1,18 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;    // usingを忘れないで
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void SceneReset()
     {
-        
+        string activeSceneName = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene(activeSceneName);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ChangeScene(string nextScene)  // 新しくメソッド追加
     {
-        
+        SceneManager.LoadScene(nextScene);
     }
 }

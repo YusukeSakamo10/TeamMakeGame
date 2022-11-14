@@ -10,7 +10,7 @@ public class CubeForceControll : MonoBehaviour
     bool _isMove = false;
     public float MaxTime = 60;
     Vector3 prePos = Vector3.zero;
-    [SerializeField] float distance = 2;
+    [SerializeField] float distance = 1.4f;
 
     [SerializeField] bool _isSelected = false;
     public bool IsSelect
@@ -36,13 +36,15 @@ public class CubeForceControll : MonoBehaviour
         if (_rb) _rb.isKinematic = true;
     }
 
+    Vector3 vec;
+
     void Update()
     {
-
         if (_isMove)
         {
             _timer++;
-         _rb.velocity = LerpV3(prePos, prePos + dir, (_timer / MaxTime)); 
+
+            /*Vector3.Lerp(Vector3.zero, vec, 1);*//*LerpV3(Vector3.zero, vec, (_timer / MaxTime)); */
             if(_timer > MaxTime)
             {
                 _timer = 0;
@@ -50,6 +52,7 @@ public class CubeForceControll : MonoBehaviour
                 _rb.velocity = new Vector3(0, 0, 0);
                 dir = new Vector3(0, 0, 0);
             }
+            else { _rb.velocity = vec; }
         }
         /*
                 switch (_direction)
@@ -111,33 +114,41 @@ public class CubeForceControll : MonoBehaviour
         
         if (_isMove) return;
         _isMove = true;
-        dir.z = distance;
-        prePos = transform.position;
+        //dir.z = distance;
+        vec.z = distance;
+        vec.x = 0;vec.y = 0;
+        //prePos = transform.position;
     }
     public void Backward()
     {
         _direction = (int)Direction.BACKWARD;
         
         if (_isMove) return;
-        dir.z = -distance;
+        //dir.z = -distance;
         _isMove = true;
-        prePos = transform.position;
+        vec.z = -distance;
+        vec.x = 0; vec.y = 0;
+        //prePos = transform.position;
     }
     public void Left()
     {
         _direction = (int)Direction.LEFT;
         if (_isMove) return;
-        dir.x = -distance;
+        //dir.x = -distance;
         _isMove = true;
-        prePos = transform.position;
+        vec.x = -distance;
+        vec.z = 0; vec.y = 0;
+        //prePos = transform.position;
     }
     public void Right()
     {
         _direction = (int)Direction.RIGHT;
         if (_isMove) return;
-        dir.x = distance;
+        //dir.x = distance;
         _isMove = true;
-        prePos = transform.position;
+        vec.x = distance;
+        vec.z = 0; vec.y = 0;
+        //prePos = transform.position;
     }
 
 
@@ -149,12 +160,12 @@ public class CubeForceControll : MonoBehaviour
         _rb.velocity = Vector3.zero;
     }
 
-    private Vector3 LerpV3(Vector3 start, Vector3 end, float t)
-    {
-        Vector3 v;
-        v.x = (1 - t) * start.x + t * end.x;
-        v.y = (1 - t) * start.y + t * end.y;
-        v.z = (1 - t) * start.z + t * end.z;
-        return v;
-    }
+    //private Vector3 LerpV3(Vector3 start, Vector3 end, float t)
+    //{
+    //    Vector3 v;
+    //    v.x = (1 - t) * start.x + t * end.x;
+    //    v.y = (1 - t) * start.y + t * end.y;
+    //    v.z = (1 - t) * start.z + t * end.z;
+    //    return v;
+    //}
 }

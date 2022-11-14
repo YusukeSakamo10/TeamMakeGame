@@ -14,6 +14,7 @@ public class PlayerMove : MonoBehaviour
     public float groundFlow = 3.3f;
 
     bool _isMove = true;
+    bool _isGround = true;
 
     public bool IsMove
     {
@@ -28,6 +29,7 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
+        _power = 10;
         if (_isMove)
         {
             h = Input.GetAxisRaw("Horizontal");
@@ -45,7 +47,20 @@ public class PlayerMove : MonoBehaviour
      
         if (Physics.Raycast(ray,out hit, groundFlow, _layerMask))
         {
-            _rb.AddForce((Vector3.up * y).normalized * _jumpPower);
+            _isGround = true;
+        }
+        else { _isGround = false; }
+
+        if(_isGround)
+        {
+            if(Input.GetKeyDown(KeyCode.Space))
+            {
+                _rb.AddForce(Vector3.up * _jumpPower,ForceMode.Impulse);
+            }
+        }
+        else 
+        {
+            _power = 6;
         }
 
         _rb.AddForce((Vector3.forward * v + Vector3.right * h).normalized * _power);

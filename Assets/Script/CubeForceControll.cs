@@ -7,10 +7,10 @@ public class CubeForceControll : MonoBehaviour
     Vector3 target = Vector3.zero;
     Rigidbody _rb;
     Vector3 dir = new Vector3(0, 0, 0);
-    bool _isMove = false;
+    [SerializeField] bool _isMove = false;
     public float MaxTime = 60;
     Vector3 prePos = Vector3.zero;
-    [SerializeField] float distance = 1.4f;
+    [SerializeField] float distance = 2.4f;
 
     [SerializeField] bool _isSelected = false;
     public bool IsSelect
@@ -45,7 +45,7 @@ public class CubeForceControll : MonoBehaviour
             _timer++;
 
             /*Vector3.Lerp(Vector3.zero, vec, 1);*//*LerpV3(Vector3.zero, vec, (_timer / MaxTime)); */
-            if(_timer > MaxTime)
+            if (_timer > MaxTime)
             {
                 _timer = 0;
                 _isMove = false;
@@ -54,31 +54,7 @@ public class CubeForceControll : MonoBehaviour
             }
             else { _rb.velocity = vec; }
         }
-        /*
-                switch (_direction)
-                {
-                    case (int)Direction.FORWARD:
 
-                        _rb.velocity(transform.forward);
-
-                        break;
-                    case (int)Direction.LEFT:
-                        _rb.velocity(-transform.right);
-                        break;
-
-                    case (int)Direction.RIGHT:
-                        //_rb.velocity(transform.right);
-                        _rb.velocity = new Vector3(1,0,0);
-                        break;
-                    case (int)Direction.BACKWARD:
-                        _rb.velocity(-transform.forward);
-
-                        break;
-                    default:
-
-                        break;
-                }
-        */
         if (_timer < 0)
         {
             Reset();
@@ -89,7 +65,10 @@ public class CubeForceControll : MonoBehaviour
             _rb.velocity = new Vector3(0, 0, 0);
 
         }
-
+        else
+        {
+            Debug.Log("time" + _timer);
+        }
     }
 
     // ‡A “ü—Í‚É‰ž‚¶‚ÄˆÚ“®Œã‚ÌˆÊ’u‚ðŽZo
@@ -158,14 +137,7 @@ public class CubeForceControll : MonoBehaviour
         _direction = (int)Direction.END;
         _timer = 0;
         _rb.velocity = Vector3.zero;
+        vec.x = 0;
+        vec.z = 0; vec.y = 0;
     }
-
-    //private Vector3 LerpV3(Vector3 start, Vector3 end, float t)
-    //{
-    //    Vector3 v;
-    //    v.x = (1 - t) * start.x + t * end.x;
-    //    v.y = (1 - t) * start.y + t * end.y;
-    //    v.z = (1 - t) * start.z + t * end.z;
-    //    return v;
-    //}
 }

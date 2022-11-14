@@ -29,6 +29,11 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+
         _power = 10;
         if (_isMove)
         {

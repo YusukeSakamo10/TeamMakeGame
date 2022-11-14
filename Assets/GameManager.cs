@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;    // using‚ð–Y‚ê‚È‚¢‚Å
 
 public class GameManager : MonoBehaviour
 {
+
     public void SceneReset()
     {
         string activeSceneName = SceneManager.GetActiveScene().name;

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Gimmick : MonoBehaviour
@@ -59,7 +57,7 @@ public class Gimmick : MonoBehaviour
 
     public void Controll()
     {
-        CubeForceControll cubeController = GetComponent<CubeForceControll>();
+        CubeController cubeController = GetComponent<CubeController>();
 
         if (_isCancel)
         {
@@ -70,11 +68,11 @@ public class Gimmick : MonoBehaviour
             _isCancel = false;
             //_Up.onClick.removeEventListener(cubeController.Forward);
         }
-        if(cubeController != null)
+        if (cubeController != null)
         {
             cubeController.IsSelect = _isSelect;
         }
-        
+
     }
 
     public void SelectCancel()

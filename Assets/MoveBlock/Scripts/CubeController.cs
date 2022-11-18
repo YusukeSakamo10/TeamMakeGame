@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CubeController : MonoBehaviour
@@ -10,7 +8,10 @@ public class CubeController : MonoBehaviour
     [SerializeField] float distance = 2;
 
     [SerializeField] bool _isSelected = false;
-
+    // [SerializeField] bool _isMoved = false;
+    Vector3 _switchBox;
+    Transform[] _children;
+    PostCollider[] _childrenCollider;
     public bool IsSelect
     {
         get { return _isSelected; }
@@ -22,11 +23,27 @@ public class CubeController : MonoBehaviour
     void Start()
     {
         target = transform.position;
+        _children = new Transform[this.transform.childCount];
+        _childrenCollider = new PostCollider[this.transform.childCount];
+        int count = 0;
+        foreach (Transform _child in this.transform)
+        {
+            _children[count] = _child;
+
+            PostCollider p = _children[count].gameObject.GetComponent<PostCollider>();
+            if (p)
+            {
+                _childrenCollider[count] = p;
+            }
+            count++;
+        }
+        SetPosChildBox();
     }
 
     // Update is called once per frame
     void Update()
     {
+
         // ‡@ ˆÚ“®’†‚©‚Ç‚¤‚©‚Ì”»’èBˆÚ“®’†‚Å‚È‚¯‚ê‚Î“ü—Í‚ğó•t
         if (transform.position == target && _isSelected)
         {
@@ -43,10 +60,8 @@ public class CubeController : MonoBehaviour
 
         Vector3 dir = new Vector3(h, 0, v);
 
-        //prevPos = target;
-        
         target = transform.position + dir * distance;
-      
+
     }
 
     public void Forward()
@@ -90,5 +105,23 @@ public class CubeController : MonoBehaviour
     void Move()
     {
         transform.position = Vector3.MoveTowards(transform.position, target, step * Time.deltaTime);
+    }
+
+    public void SetPosChildBox()
+    {
+        for (int i = 0; i < _children.Length; i++)
+        {
+            if (!_isSelected)
+            {
+                _children[i].transform.localScale = Vector3.zero;
+                _childrenCollider[i]._isSelect = false;
+            }
+            else
+            {
+                _children[i].transform.localScale = Vector3.one;
+                _childrenCollider[i]._isSelect = true;
+            }
+
+        }
     }
 }

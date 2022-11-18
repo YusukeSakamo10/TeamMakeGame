@@ -7,6 +7,10 @@ TagManager:
   - Wall
   - Enemy
   - Ground
+  - Forward
+  - Left
+  - Right
+  - Backward
   layers:
   - Default
   - TransparentFX

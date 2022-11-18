@@ -71,12 +71,12 @@ public class PlayerMove : MonoBehaviour
         _rb.AddForce((Vector3.forward * v + Vector3.right * h).normalized * _power);
 
         //ƒL[‚ª‰Ÿ‚³‚ê‚Ä‚¢‚È‚¢‚Æ‚«ƒJƒƒ‰‚Ì•ûŒü‚ğŒü‚­
-        if (h == 0 && v == 0 && y == 0)
-        {
-            Vector3 cameraForward = Vector3.Scale(Camera.main.transform.forward, new Vector3(1, 0, 1)).normalized;
+        //if (h == 0 && v == 0 && y == 0)
+        //{
+        //    Vector3 cameraForward = Vector3.Scale(Camera.main.transform.forward, new Vector3(1, 0, 1)).normalized;
 
-            transform.rotation = Quaternion.LookRotation(cameraForward);
-        }
+        //    transform.rotation = Quaternion.LookRotation(cameraForward);
+        //}
     }
 
     void FixedUpdate()

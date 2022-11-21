@@ -4,11 +4,11 @@ public class CubeController : MonoBehaviour
 {
     Vector3 target;
 
-    [SerializeField] float step = 2f;
-    [SerializeField] float distance = 2;
+    [SerializeField] float step = 4f;
+    [SerializeField] float distance = 4;
 
     [SerializeField] bool _isSelected = false;
-    // [SerializeField] bool _isMoved = false;
+    // [SerializeField] bool _isMovedd = false;
     Vector3 _switchBox;
     Transform[] _children;
     PostCollider[] _childrenCollider;
@@ -61,7 +61,6 @@ public class CubeController : MonoBehaviour
         Vector3 dir = new Vector3(h, 0, v);
 
         target = transform.position + dir * distance;
-
     }
 
     public void Forward()

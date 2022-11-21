@@ -1,18 +1,26 @@
 using UnityEngine;
 using UnityEngine.UI;
+
+
 public class PostCollider : MonoBehaviour
 {
-
     private bool _isHit = false;
     [SerializeField] Button _button;
     public bool _isSelect;
+    public bool _isMoved;
 
     private Vector3 _prePos;
 
+    Vector3 _colliderPrePos;
+
     private void Start()
     {
+        _colliderPrePos = this.transform.position;
         SetBotton();
-        if (_button) _prePos = _button.transform.position;
+        if (_button) 
+        {   
+            _prePos = _button.transform.position;
+        }
         _isSelect = false;
     }
 
@@ -20,13 +28,36 @@ public class PostCollider : MonoBehaviour
     {
         if (_button && _isSelect)
         {
-            if (_isHit) _button.transform.position = new Vector3(-300, -300, 0);
-            else _button.transform.position = _prePos;
+            if (_isHit)
+            {
+                _button.transform.position = new Vector3(-300, -300, 0);
+            }
+            else 
+            { 
+                ButtonReset(); 
+            }
+
+            //Ž~‚Ü‚Á‚Ä‚é
+            if (this.transform.position == _colliderPrePos)
+            {
+                _isMoved = true;
+            }
+            //ˆÚ“®’†
+            else
+            {
+                _isMoved = false;
+                _colliderPrePos = this.transform.position;
+            }
         }
     }
+
+
     private void OnTriggerStay(Collider other)
     {
-        _isHit = true;
+        if (_isMoved)
+        {
+            _isHit = true;
+        }
     }
     private void OnTriggerExit(Collider other)
     {
@@ -38,12 +69,12 @@ public class PostCollider : MonoBehaviour
         if (_button)
         {
             if (_isHit) _button.transform.position = new Vector3(-300, -300, 0);
-            else        _button.transform.position = _prePos;
+            else _button.transform.position = _prePos;
         }
     }
     public void ButtonReset()
     {
-        if(_button)_button.transform.position = _prePos;
+        if (_button) _button.transform.position = _prePos;
     }
 
     void SetBotton()

@@ -3,6 +3,31 @@ using UnityEngine.SceneManagement;    // using‚ð–Y‚ê‚È‚¢‚Å
 
 public class GameManager : MonoBehaviour
 {
+    int moveCount = 0;
+    [SerializeField] int maxMoveCount = 3;
+
+    public int MoveCountValue
+    {
+        get { return moveCount; }
+        set { moveCount = value; }
+    }
+
+    public int MaxMoveCount
+    {
+        get { return maxMoveCount; }
+        set { maxMoveCount = value; }
+    }
+
+    private void Start()
+    {
+        moveCount = 0;
+    }
+
+    public void MoveCount()
+    {
+        if (maxMoveCount <= moveCount) return;
+        moveCount++;
+    }
 
     public void SceneReset()
     {

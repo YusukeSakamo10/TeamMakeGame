@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class CubeController : MonoBehaviour
 {
+    GameManager _GameManager;
+
     Vector3 target;
 
     [SerializeField] float step = 4f;
@@ -16,12 +18,14 @@ public class CubeController : MonoBehaviour
     {
         get { return _isSelected; }
         set { _isSelected = value; }
-
     }
 
     // Start is called before the first frame update
     void Start()
     {
+        GameManager g = GameObject.Find("GameManager").GetComponent<GameManager>();
+        if (g != null) _GameManager = g.GetComponent<GameManager>();
+
         target = transform.position;
         _children = new Transform[this.transform.childCount];
         _childrenCollider = new PostCollider[this.transform.childCount];
@@ -43,60 +47,56 @@ public class CubeController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        // ‡@ ˆÚ“®’†‚©‚Ç‚¤‚©‚Ì”»’èBˆÚ“®’†‚Å‚È‚¯‚ê‚Î“ü—Í‚ðŽó•t
-        if (transform.position == target && _isSelected)
-        {
-            SetTargetPosition();
-        }
         Move();
-    }
-
-    // ‡A “ü—Í‚É‰ž‚¶‚ÄˆÚ“®Œã‚ÌˆÊ’u‚ðŽZo
-    void SetTargetPosition()
-    {
-        float h = Input.GetAxisRaw("Horizontal");
-        float v = Input.GetAxisRaw("Vertical");
-
-        Vector3 dir = new Vector3(h, 0, v);
-
-        target = transform.position + dir * distance;
     }
 
     public void Forward()
     {
         if (transform.position == target && _isSelected)
         {
+            if (invalid()) return;
+
             Vector3 dir = new Vector3(0, 0, 1);
 
             target = transform.position + dir * distance;
+
+            _GameManager.MoveCount();
         }
     }
     public void Backward()
     {
         if (transform.position == target && _isSelected)
         {
+            if (invalid()) return;
+
             Vector3 dir = new Vector3(0, 0, -1);
 
             target = transform.position + dir * distance;
+            _GameManager.MoveCount();
         }
     }
     public void Left()
     {
         if (transform.position == target && _isSelected)
         {
+            if (invalid()) return;
+
             Vector3 dir = new Vector3(-1, 0, 0);
 
             target = transform.position + dir * distance;
+            _GameManager.MoveCount();
         }
     }
     public void Right()
     {
         if (transform.position == target && _isSelected)
         {
+            if (invalid()) return;
+
             Vector3 dir = new Vector3(1, 0, 0);
 
             target = transform.position + dir * distance;
+            _GameManager.MoveCount();
         }
     }
 
@@ -123,4 +123,11 @@ public class CubeController : MonoBehaviour
 
         }
     }
+
+    private bool invalid()
+    {
+        if(_GameManager.MoveCountValue >= _GameManager.MaxMoveCount) { return true; }
+        return false;
+    }
+
 }

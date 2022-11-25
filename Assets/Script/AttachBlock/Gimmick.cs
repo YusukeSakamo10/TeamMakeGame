@@ -61,7 +61,6 @@ public class Gimmick : MonoBehaviour
 
         if (_isCancel)
         {
-            Debug.Log("Flag" + _isCancel);
             PlayerMove p = GameObject.Find("player").GetComponent<PlayerMove>();
             p.IsMove = true;
             _isSelect = false;

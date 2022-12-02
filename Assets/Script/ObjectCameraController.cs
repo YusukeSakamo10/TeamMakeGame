@@ -16,7 +16,7 @@ public class ObjectCameraController : MonoBehaviour
         _vCam = GetComponent<CinemachineVirtualCamera>();
         if (_vCam) _vCam.Priority = 0;
     }
-    int time = 60;
+    int time = 120;
 
 
     // Update is called once per frame
@@ -38,7 +38,7 @@ public class ObjectCameraController : MonoBehaviour
         }
         else
         {
-            time = 60;
+            time = 120;
             _vCam.Priority = 0;
         }
     }

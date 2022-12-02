@@ -14,14 +14,9 @@ public class MoveObjMagic : MonoBehaviour
     public Button _Left;
     public Button _Right;
 
-    Vector3 _Position;
-    public Vector3 Position
-    {
-        get { return _Position; }
-        set { _Position = value; }
-    }
-
     PlayerMove _Player;
+
+    opaqueBlock pivot;
 
     void Start()
     {
@@ -31,6 +26,9 @@ public class MoveObjMagic : MonoBehaviour
         Button b = GameObject.Find("Cancel").GetComponent<Button>();
         obj = GameObject.Find("ObjectCAM").GetComponent<ObjectCameraController>();
         if (b != null) button = b.GetComponent<Button>();
+
+        opaqueBlock o = GameObject.Find("pivot").GetComponent<opaqueBlock>();
+        if (o != null) pivot = o.GetComponent<opaqueBlock>();
     }
 
     void Update()
@@ -40,8 +38,10 @@ public class MoveObjMagic : MonoBehaviour
         Debug.DrawRay(Camera.main.transform.position, ray.direction * rayDist, Color.green);
         if (Physics.Raycast(ray, out hit, rayDist, _layerMask))
         {
+            Transform o = hit.collider.gameObject.GetComponent<Transform>();
             Gimmick g = hit.collider.gameObject.GetComponent<Gimmick>();
             CubeController _cube = hit.collider.gameObject.GetComponent<CubeController>();
+            
             if (g)
             {
                 g.ChangeColor();
@@ -55,6 +55,9 @@ public class MoveObjMagic : MonoBehaviour
                     {
                         ObjFocusCameraClear();
                     }
+
+                    //ピポットにトランスフォームを送る
+                    pivot._EndTrans = _cube.transform;
 
                     g.IsSelect = true;
                     if (button) button.onClick.AddListener(g.SelectCancel);

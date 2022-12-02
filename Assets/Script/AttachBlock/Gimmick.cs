@@ -9,6 +9,8 @@ public class Gimmick : MonoBehaviour
     Renderer _renderer;
     float _timer;
     GameObject _gameManager;
+    opaqueBlock pivot;
+
 
     bool _isSelect = false;
     public bool _isCancel = false;
@@ -20,6 +22,9 @@ public class Gimmick : MonoBehaviour
 
     void Start()
     {
+        opaqueBlock o = GameObject.Find("pivot").GetComponent<opaqueBlock>();
+        if (o != null) pivot = o.GetComponent<opaqueBlock>();
+
         _gameManager = GameObject.Find("GameManager").GetComponent<GameObject>();
         _renderer = GetComponent<Renderer>();
         _original = _renderer.material;
@@ -65,6 +70,7 @@ public class Gimmick : MonoBehaviour
             p.IsMove = true;
             _isSelect = false;
             _isCancel = false;
+            pivot._EndTrans = null;
             //_Up.onClick.removeEventListener(cubeController.Forward);
         }
         if (cubeController != null)

@@ -47,7 +47,7 @@ public class MoveObjMagic : MonoBehaviour
                 g.ChangeColor();
 
                 //　マウスの左クリックで撃つ
-                if (Input.GetButtonDown("Fire1"))
+                if (Input.GetMouseButtonDown(0))
                 {
                     _Player.IsMove = false;
 

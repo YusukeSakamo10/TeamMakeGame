@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;    // using‚ğ–Y‚ê‚È‚¢‚Å
 using UnityEngine.UI;
 
@@ -7,6 +8,8 @@ public class GameManager : MonoBehaviour
     int moveCount = 0;
     [SerializeField] int maxMoveCount = 3;
 
+    [Tooltip("jump‚µ‚½‚ÉŒÄ‚Ño‚·ˆ—")]
+    [SerializeField] UnityEvent _onJump = null;
 
     [Tooltip("c‚èˆÚ“®‰ñ”‚Ì‰Šú’l")]
     [SerializeField] int _initialMove = 5;

@@ -57,10 +57,6 @@ public class MoveObjMagic : MonoBehaviour
                         ObjFocusCameraClear();
                     }
 
-                   // g.ChangeSelectColor();
-         
-               
-
                     //ピポットにトランスフォームを送る
                     pivot._EndTrans = _cube.transform;
 

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3130965434057077926}
   m_Layer: 0
   m_Name: RNormalBlock
-  m_TagString: Untagged
+  m_TagString: Right
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -69,3 +69,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _button: {fileID: 8228369939127878638, guid: 1adb33ed8cb90b14892373d67959a27d, type: 3}
   _isSelect: 0
+  _isMoved: 0

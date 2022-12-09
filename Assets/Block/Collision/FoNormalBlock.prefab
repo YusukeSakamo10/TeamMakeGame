@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6232160208896427561}
   m_Layer: 0
   m_Name: FoNormalBlock
-  m_TagString: Untagged
+  m_TagString: Forward
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -112,3 +112,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _button: {fileID: 1178830171019007558, guid: 2556e61adda826045b6fab08b42d7441, type: 3}
   _isSelect: 0
+  _isMoved: 0

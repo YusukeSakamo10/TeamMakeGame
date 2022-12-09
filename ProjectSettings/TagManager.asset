@@ -11,7 +11,11 @@ TagManager:
   - Left
   - Right
   - Backward
+<<<<<<< HEAD
   - Pivot
+=======
+  - Block
+>>>>>>> 649cc9b21c33e10f396cb3fb622bc19cd3c3af58
   layers:
   - Default
   - TransparentFX

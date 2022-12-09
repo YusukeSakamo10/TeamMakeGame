@@ -11,22 +11,9 @@ public class opaque : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Block")
-        {
-            Debug.Log("AAAAAA");
-            MeshRenderer m = other.gameObject.GetComponent<MeshRenderer>();
-            m.material.SetFloat("_Mode", 2);
-            //m.material.SetInt("_SrcBlend", (int)UnityEngine.Rendering.BlendMode.SrcAlpha);
-            //m.material.SetInt("_DstBlend", (int)UnityEngine.Rendering.BlendMode.OneMinusSrcAlpha);
-            //m.material.SetInt("_ZWrite", 0);
-            //m.material.DisableKeyword("_ALPHATEST_ON");
-            //m.material.EnableKeyword("_ALPHABLEND_ON");
-            //m.material.DisableKeyword("_ALPHAPREMULTIPLY_ON");
-            //m.material.SetOverrideTag("RenderType", "Fade");
-            ////当たったオブジェクトのレンダラーを取得しαを変える
-            //Renderer r = other.gameObject.GetComponent<Renderer>();
-            //ChangeAlpha(r, m_transparency);
-        }
+        //当たったオブジェクトのレンダラーを取得しαを変える
+        Renderer r = other.gameObject.GetComponent<Renderer>();
+        ChangeAlpha(r, m_transparency);
     }
 
     private void OnTriggerExit(Collider other)

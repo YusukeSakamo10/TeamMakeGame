@@ -65,22 +65,27 @@ public class Gimmick : MonoBehaviour
 
 
 
-
+    //
     public void Controll()
     {
+        //動かすようにクラスを受け取る。とりあえずこれは上に書くべきもの、
         CubeController cubeController = GetComponent<CubeController>();
 
         if (_isCancel)
         {
+            //上で書いた方が良いのかもしれないプレイヤを動かすために一時的に探して動けるようにする
             PlayerMove p = GameObject.Find("player").GetComponent<PlayerMove>();
             p.IsMove = true;
+            //選択されたのを解除
             _isSelect = false;
+            //キャンセルし続けないよう一度だけで通るように解除
             _isCancel = false;
             pivot._EndTrans = null;
             //_Up.onClick.removeEventListener(cubeController.Forward);
         }
         if (cubeController != null)
         {
+            //選択されたときと解除されたときに同じ状態になるので自分の状態を送る
             cubeController.IsSelect = _isSelect;
         }
 

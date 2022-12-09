@@ -11,8 +11,8 @@ public class GameManager : MonoBehaviour
     [Tooltip("jumpした時に呼び出す処理")]
     [SerializeField] UnityEvent _onJump = null;
 
-    [Tooltip("残り移動回数の初期値")]
-    [SerializeField] int _initialMove = 5;
+    //[Tooltip("残り移動回数の初期値")]
+    //[SerializeField] int _initialMove = 5;
 
     [Tooltip("残り移動回数を表示するための Text (UI)")]
     [SerializeField] Text _moveText = null;
@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
 
         _moveObject = GameObject.Find("MoveText");
         _moveText = _moveObject.GetComponent<Text>();
-       _moveText.text = string.Format("{0:000}", _initialMove);
+       _moveText.text = string.Format("{0:000}", maxMoveCount);
     }
 
     public void MoveCount()
@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
         if (maxMoveCount <= moveCount) return;
         moveCount++;
 
-        int tmp = _initialMove - moveCount;
+        int tmp = maxMoveCount - moveCount;
         _moveText.text = tmp.ToString("000");
     }
 

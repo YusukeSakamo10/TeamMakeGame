@@ -4,6 +4,7 @@ using UnityEngine;
 using Cinemachine;
 public class ObjectCameraController : MonoBehaviour
 {
+    //選択されたオブジェクトを保管するよう
     GameObject _selecteObj;
     private CinemachineVirtualCamera _vCam;
     public GameObject SelectObj
@@ -22,9 +23,12 @@ public class ObjectCameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //オブジェクトが入るのが選択されたときなのでオブジェクトがあればはいる
         if (SelectObj)
         {
+            //カメラの優先度をあげる
             _vCam.Priority = 100;
+            //見つめる対象を選択されたオブジェクトへ
             _vCam.LookAt = _selecteObj.transform;
             if (time > 0)
             {

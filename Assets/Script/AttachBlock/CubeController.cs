@@ -10,8 +10,7 @@ public class CubeController : MonoBehaviour
     [SerializeField] float distance = 4;
 
     [SerializeField] bool _isSelected = false;
-    // [SerializeField] bool _isMovedd = false;
-    Vector3 _switchBox;
+
     Transform[] _children;
     PostCollider[] _childrenCollider;
     public bool IsSelect
@@ -27,9 +26,11 @@ public class CubeController : MonoBehaviour
         if (g != null) _GameManager = g.GetComponent<GameManager>();
 
         target = transform.position;
+        //動かすものを親として先行で当たり判定用の子を保存するために
         _children = new Transform[this.transform.childCount];
         _childrenCollider = new PostCollider[this.transform.childCount];
         int count = 0;
+        //子オブジェクトを登録していく
         foreach (Transform _child in this.transform)
         {
             _children[count] = _child;
@@ -41,6 +42,7 @@ public class CubeController : MonoBehaviour
             }
             count++;
         }
+        //子オブジェクトをひとまずオフに登録
         SetPosChildBox();
     }
 
@@ -108,6 +110,7 @@ public class CubeController : MonoBehaviour
 
     public void SetPosChildBox()
     {
+        //親クラスが選択されているか判断して子オブジェクトに対してアクション
         for (int i = 0; i < _children.Length; i++)
         {
             if (!_isSelected)

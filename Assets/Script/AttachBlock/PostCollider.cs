@@ -8,15 +8,20 @@ public class PostCollider : MonoBehaviour
     [SerializeField] Button _button;
     public bool _isSelect;
     public bool _isMoved;
-
+    /// <summary>
+    /// 元ボタン位置を保存するよう
+    /// </summary>
     private Vector3 _prePos;
-
+    
     Vector3 _colliderPrePos;
 
     private void Start()
     {
+        //元の位置を開始時に保存
         _colliderPrePos = this.transform.position;
+        //ボタンの割り当てをスクリプトから
         SetBotton();
+        //ボタンが入ってれば元の位置を保存
         if (_button) 
         {   
             _prePos = _button.transform.position;
@@ -26,14 +31,17 @@ public class PostCollider : MonoBehaviour
 
     private void Update()
     {
+        //ボタンが入っていてオブジェクトが選択されていれば
         if (_button && _isSelect)
         {
+            //当たっていればそれに合わせてボタンを見えない位置へ
             if (_isHit)
             {
                 _button.transform.position = new Vector3(-300, -300, 0);
             }
             else 
             { 
+                //ボタンの位置を戻す
                 ButtonReset(); 
             }
 
@@ -70,6 +78,7 @@ public class PostCollider : MonoBehaviour
         }
     }
 
+    //使ってないなら消してしまえば？
     public void CheckPostMoveButton()
     {
         if (_button)
@@ -78,11 +87,16 @@ public class PostCollider : MonoBehaviour
             else _button.transform.position = _prePos;
         }
     }
+    /// <summary>
+    /// ボタンを規定値へ戻す
+    /// </summary>
     public void ButtonReset()
     {
         if (_button) _button.transform.position = _prePos;
     }
-
+    /// <summary>
+    /// ボタンの割り当て
+    /// </summary>
     void SetBotton()
     {
         //ボタンが入ってたら抜ける

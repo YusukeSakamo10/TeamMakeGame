@@ -11,6 +11,7 @@ TagManager:
   - Left
   - Right
   - Backward
+  - Pivot
   layers:
   - Default
   - TransparentFX

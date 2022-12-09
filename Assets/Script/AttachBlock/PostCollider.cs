@@ -54,14 +54,20 @@ public class PostCollider : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (_isMoved)
+        if (other.gameObject.tag != "Pivot")
         {
-            _isHit = true;
+            if (_isMoved)
+            {
+                _isHit = true;
+            }
         }
     }
     private void OnTriggerExit(Collider other)
     {
-        _isHit = false;
+        if (other.gameObject.tag != "Pivot")
+        {
+            _isHit = false;
+        }
     }
 
     public void CheckPostMoveButton()

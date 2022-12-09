@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-    public float _power = 10;
-    Rigidbody _rb;
+    public float _power = 8;
+    public Rigidbody _rb;
     float h;
     float v;
     float y;
@@ -34,7 +34,8 @@ public class PlayerMove : MonoBehaviour
             Application.Quit();
         }
 
-        _power = 10;
+        _power = 8;
+
         if (_isMove)
         {
             h = Input.GetAxisRaw("Horizontal");
@@ -65,7 +66,7 @@ public class PlayerMove : MonoBehaviour
         }
         else 
         {
-            _power = 6;
+            _power = 3;
         }
 
         _rb.AddForce((Vector3.forward * v + Vector3.right * h).normalized * _power);

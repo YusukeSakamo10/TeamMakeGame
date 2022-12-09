@@ -35,7 +35,6 @@ public class Gimmick : MonoBehaviour
     {
         if (!_isSelect)
         {
-
             if (_timer > 0)
             {
                 _timer -= Time.deltaTime;
@@ -46,19 +45,26 @@ public class Gimmick : MonoBehaviour
                 }
             }
         }
-        else
+        else ChangeSelectColor();
+    }
+
+    public void ChangeSelectColor()
+    {
+        if (_isSelect)
         {
             _renderer.material = _selectedMat;
             Controll();
         }
     }
 
-
     public void ChangeColor()
     {
         _renderer.material = _focusMat;
         _timer = _interval;
     }
+
+
+
 
     public void Controll()
     {

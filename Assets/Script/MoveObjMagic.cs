@@ -44,10 +44,11 @@ public class MoveObjMagic : MonoBehaviour
             
             if (g)
             {
-                g.ChangeColor();
+                
+                if(!_saveCube)g.ChangeColor();
 
                 //　マウスの左クリックで撃つ
-                if (Input.GetMouseButtonDown(0))
+                if (Input.GetMouseButtonDown(0)&&!_saveCube)
                 {
                     _Player.IsMove = false;
 
@@ -55,6 +56,10 @@ public class MoveObjMagic : MonoBehaviour
                     {
                         ObjFocusCameraClear();
                     }
+
+                   // g.ChangeSelectColor();
+         
+               
 
                     //ピポットにトランスフォームを送る
                     pivot._EndTrans = _cube.transform;

@@ -1,10 +1,21 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;    // usingを忘れないで
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     int moveCount = 0;
     [SerializeField] int maxMoveCount = 3;
+
+
+    [Tooltip("残り移動回数の初期値")]
+    [SerializeField] int _initialMove = 5;
+
+    [Tooltip("残り移動回数を表示するための Text (UI)")]
+    [SerializeField] Text _moveText = null;
+    /// <summary>残り移動回数を表示するための GameObject</summary>
+    GameObject _moveObject;
+
 
     public int MoveCountValue
     {
@@ -20,13 +31,20 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        moveCount = 0;
+        moveCount =0;
+
+        _moveObject = GameObject.Find("MoveText");
+        _moveText = _moveObject.GetComponent<Text>();
+       _moveText.text = string.Format("{0:000}", _initialMove);
     }
 
     public void MoveCount()
     {
         if (maxMoveCount <= moveCount) return;
         moveCount++;
+
+        int tmp = _initialMove - moveCount;
+        _moveText.text = tmp.ToString("000");
     }
 
     public void SceneReset()

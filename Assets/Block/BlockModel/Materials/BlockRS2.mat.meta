@@ -1,4 +1,5 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 <<<<<<< HEAD:Assets/Block/BlockModel/Materials/BlockRS2.mat.meta
 guid: 3e77076346535b44c9411e977ded916a
 NativeFormatImporter:
@@ -8,6 +9,12 @@ folderAsset: yes
 DefaultImporter:
 >>>>>>> parent of fd05093 (透明化途中):Assets/Block/BlockModel/Materials.meta
   externalObjects: {}
+=======
+guid: 3e77076346535b44c9411e977ded916a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+>>>>>>> fc36e0e3306bdc49671f6acbfe97d6ca4f8facec
   userData: 
   assetBundleName: 
   assetBundleVariant: 

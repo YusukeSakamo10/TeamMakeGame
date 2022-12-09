@@ -695,6 +695,7 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 15
 =======
   m_RootOrder: 8
@@ -705,6 +706,9 @@ Transform:
 =======
   m_RootOrder: 7
 >>>>>>> parent of fd05093 (透明化途中)
+=======
+  m_RootOrder: 8
+>>>>>>> fc36e0e3306bdc49671f6acbfe97d6ca4f8facec
   m_LocalEulerAnglesHint: {x: 28.94, y: -28.43, z: 0}
 --- !u!1 &260103158
 GameObject:
@@ -778,6 +782,7 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalRotation: {x: 0.26431787, y: 0.0005763739, z: -0.00015796383, w: 0.96443546}
 =======
   m_LocalRotation: {x: 0.26431784, y: 0.0005764746, z: -0.00015799142, w: 0.96443546}
@@ -788,6 +793,9 @@ Transform:
 =======
   m_LocalRotation: {x: 0.26431784, y: 0.0005771218, z: -0.00015816878, w: 0.96443546}
 >>>>>>> parent of fd05093 (透明化途中)
+=======
+  m_LocalRotation: {x: 0.26431784, y: 0.0005764746, z: -0.00015799142, w: 0.96443546}
+>>>>>>> fc36e0e3306bdc49671f6acbfe97d6ca4f8facec
   m_LocalPosition: {x: -0.0000000018626451, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -859,7 +867,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &261891206
 BoxCollider:
@@ -1856,6 +1864,7 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalPosition: {x: -0.004684845, y: 6, z: -24.599998}
 =======
   m_LocalPosition: {x: -0.004685672, y: 7.73, z: -24.599998}
@@ -1866,6 +1875,9 @@ Transform:
 =======
   m_LocalPosition: {x: -0.004690988, y: 7.73, z: -24.599998}
 >>>>>>> parent of fd05093 (透明化途中)
+=======
+  m_LocalPosition: {x: -0.004685672, y: 7.73, z: -24.599998}
+>>>>>>> fc36e0e3306bdc49671f6acbfe97d6ca4f8facec
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1873,6 +1885,7 @@ Transform:
   - {fileID: 1302064954}
   - {fileID: 1583963972}
   m_Father: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1886,6 +1899,9 @@ Transform:
 =======
   m_RootOrder: 6
 >>>>>>> parent of fd05093 (透明化途中)
+=======
+  m_RootOrder: 7
+>>>>>>> fc36e0e3306bdc49671f6acbfe97d6ca4f8facec
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &510553330
 MonoBehaviour:
@@ -2331,6 +2347,7 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 23
 =======
   m_RootOrder: 10
@@ -2341,6 +2358,9 @@ Transform:
 =======
   m_RootOrder: 9
 >>>>>>> parent of fd05093 (透明化途中)
+=======
+  m_RootOrder: 10
+>>>>>>> fc36e0e3306bdc49671f6acbfe97d6ca4f8facec
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &716994650
 GameObject:
@@ -2929,6 +2949,7 @@ PrefabInstance:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 13
 =======
       value: 3
@@ -2939,6 +2960,9 @@ PrefabInstance:
 =======
       value: 2
 >>>>>>> parent of fd05093 (透明化途中)
+=======
+      value: 3
+>>>>>>> fc36e0e3306bdc49671f6acbfe97d6ca4f8facec
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: addd82c150e53f345945cf9e6cde0c8b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3075,6 +3099,7 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalRotation: {x: 0.20668794, y: 0.0005847401, z: -0.00012352607, w: 0.9784067}
   m_LocalPosition: {x: -0.004684845, y: 6, z: -24.599998}
 =======
@@ -3089,10 +3114,15 @@ Transform:
   m_LocalRotation: {x: 0.20668796, y: 0.00058551243, z: -0.00012368924, w: 0.9784067}
   m_LocalPosition: {x: -0.004690988, y: 7.73, z: -24.599998}
 >>>>>>> parent of fd05093 (透明化途中)
+=======
+  m_LocalRotation: {x: 0.20668796, y: 0.00058484235, z: -0.00012354765, w: 0.9784067}
+  m_LocalPosition: {x: -0.004685672, y: 7.73, z: -24.599998}
+>>>>>>> fc36e0e3306bdc49671f6acbfe97d6ca4f8facec
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3106,6 +3136,9 @@ Transform:
 =======
   m_RootOrder: 5
 >>>>>>> parent of fd05093 (透明化途中)
+=======
+  m_RootOrder: 6
+>>>>>>> fc36e0e3306bdc49671f6acbfe97d6ca4f8facec
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &963194229
 MonoBehaviour:
@@ -3647,6 +3680,7 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 9
 =======
   m_RootOrder: 14
@@ -3657,6 +3691,9 @@ Transform:
 =======
   m_RootOrder: 13
 >>>>>>> parent of fd05093 (透明化途中)
+=======
+  m_RootOrder: 14
+>>>>>>> fc36e0e3306bdc49671f6acbfe97d6ca4f8facec
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1202345200
 GameObject:
@@ -3724,6 +3761,7 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalPosition: {x: -0.0046848534, y: 6, z: -14.599998}
 =======
   m_LocalPosition: {x: -0.0046856776, y: 7.73, z: -14.599998}
@@ -3734,6 +3772,9 @@ Transform:
 =======
   m_LocalPosition: {x: -0.0046909936, y: 7.73, z: -14.599998}
 >>>>>>> parent of fd05093 (透明化途中)
+=======
+  m_LocalPosition: {x: -0.0046856776, y: 7.73, z: -14.599998}
+>>>>>>> fc36e0e3306bdc49671f6acbfe97d6ca4f8facec
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3887,6 +3928,7 @@ PrefabInstance:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 7
 =======
       value: 2
@@ -3897,6 +3939,9 @@ PrefabInstance:
 =======
       value: 1
 >>>>>>> parent of fd05093 (透明化途中)
+=======
+      value: 2
+>>>>>>> fc36e0e3306bdc49671f6acbfe97d6ca4f8facec
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: da91ec3849bafd745aac8717642315d4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3941,6 +3986,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: da91ec3849bafd745aac8717642315d4, type: 3}
       propertyPath: m_Name
       value: CrossNew
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: da91ec3849bafd745aac8717642315d4, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da91ec3849bafd745aac8717642315d4, type: 3}
@@ -4063,6 +4112,7 @@ PrefabInstance:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 3
 =======
       value: 11
@@ -4073,6 +4123,9 @@ PrefabInstance:
 =======
       value: 10
 >>>>>>> parent of fd05093 (透明化途中)
+=======
+      value: 11
+>>>>>>> fc36e0e3306bdc49671f6acbfe97d6ca4f8facec
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ce542672ed68f7946b6b4d6dfe01575c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4508,6 +4561,7 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalRotation: {x: 0.20668796, y: 0.00058473175, z: -0.00012352433, w: 0.9784067}
 =======
   m_LocalRotation: {x: 0.20668794, y: 0.00058483396, z: -0.0001235459, w: 0.9784067}
@@ -4518,6 +4572,9 @@ Transform:
 =======
   m_LocalRotation: {x: 0.20668793, y: 0.0005854906, z: -0.00012368461, w: 0.9784067}
 >>>>>>> parent of fd05093 (透明化途中)
+=======
+  m_LocalRotation: {x: 0.20668794, y: 0.00058483396, z: -0.0001235459, w: 0.9784067}
+>>>>>>> fc36e0e3306bdc49671f6acbfe97d6ca4f8facec
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -9454,6 +9511,7 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 19
 =======
   m_RootOrder: 9
@@ -9464,6 +9522,9 @@ Transform:
 =======
   m_RootOrder: 8
 >>>>>>> parent of fd05093 (透明化途中)
+=======
+  m_RootOrder: 9
+>>>>>>> fc36e0e3306bdc49671f6acbfe97d6ca4f8facec
   m_LocalEulerAnglesHint: {x: 0, y: -0.57, z: 0}
 --- !u!1 &1583963970
 GameObject:
@@ -9537,6 +9598,7 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalRotation: {x: 0.14993653, y: 0.0005908894, z: -0.0000896089, w: 0.98869544}
 =======
   m_LocalRotation: {x: 0.14993651, y: 0.00059097534, z: -0.00008962191, w: 0.98869544}
@@ -9547,6 +9609,9 @@ Transform:
 =======
   m_LocalRotation: {x: 0.14993651, y: 0.0005916389, z: -0.00008972255, w: 0.98869544}
 >>>>>>> parent of fd05093 (透明化途中)
+=======
+  m_LocalRotation: {x: 0.14993651, y: 0.00059097534, z: -0.00008962191, w: 0.98869544}
+>>>>>>> fc36e0e3306bdc49671f6acbfe97d6ca4f8facec
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -9975,6 +10040,7 @@ PrefabInstance:
       propertyPath: m_RootOrder
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 13
 =======
       value: 12
@@ -9982,6 +10048,9 @@ PrefabInstance:
 =======
       value: 12
 >>>>>>> parent of fd05093 (透明化途中)
+=======
+      value: 13
+>>>>>>> fc36e0e3306bdc49671f6acbfe97d6ca4f8facec
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 055933f58e1a28449af6807945ab8395, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10076,6 +10145,7 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 6
 =======
   m_RootOrder: 12
@@ -10086,6 +10156,9 @@ Transform:
 =======
   m_RootOrder: 11
 >>>>>>> parent of fd05093 (透明化途中)
+=======
+  m_RootOrder: 12
+>>>>>>> fc36e0e3306bdc49671f6acbfe97d6ca4f8facec
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1864079547
 GameObject:
@@ -10498,6 +10571,7 @@ PrefabInstance:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 21
 =======
       value: 4
@@ -10508,6 +10582,9 @@ PrefabInstance:
 =======
       value: 3
 >>>>>>> parent of fd05093 (透明化途中)
+=======
+      value: 4
+>>>>>>> fc36e0e3306bdc49671f6acbfe97d6ca4f8facec
       objectReference: {fileID: 0}
     - target: {fileID: 540620422486421342, guid: eff4cd1c461043f47acc53c0876ed2f0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10735,6 +10812,7 @@ PrefabInstance:
       value: BlockRS2
       objectReference: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of fd05093 (透明化途中)
 =======
 >>>>>>> parent of fd05093 (透明化途中)
@@ -10817,3 +10895,11 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e89007185049df49b85640483b024ef, type: 3}
 >>>>>>> parent of fd05093 (透明化途中)
+=======
+    - target: {fileID: 6227564637378005248, guid: b717395e80e0e414b9edac171ba83013, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3e77076346535b44c9411e977ded916a, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b717395e80e0e414b9edac171ba83013, type: 3}
+>>>>>>> fc36e0e3306bdc49671f6acbfe97d6ca4f8facec

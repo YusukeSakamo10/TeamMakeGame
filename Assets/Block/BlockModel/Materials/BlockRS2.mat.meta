@@ -1,8 +1,24 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+<<<<<<< HEAD:Assets/Block/BlockModel/Materials/BlockRS2.mat.meta
+guid: 3e77076346535b44c9411e977ded916a
+NativeFormatImporter:
+=======
+guid: 6be9219cf876e704e8e538bbe3621877
+folderAsset: yes
+DefaultImporter:
+>>>>>>> parent of fd05093 (透明化途中):Assets/Block/BlockModel/Materials.meta
+  externalObjects: {}
+=======
 guid: 3e77076346535b44c9411e977ded916a
 NativeFormatImporter:
   externalObjects: {}
+<<<<<<< HEAD
   mainObjectFileID: 0
+=======
+  mainObjectFileID: 2100000
+>>>>>>> fc36e0e3306bdc49671f6acbfe97d6ca4f8facec
+>>>>>>> 7c39c1c430efacca5dbb00c704865aee86655bf6
   userData: 
   assetBundleName: 
   assetBundleVariant: 

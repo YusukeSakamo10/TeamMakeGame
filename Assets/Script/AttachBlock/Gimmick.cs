@@ -20,6 +20,9 @@ public class Gimmick : MonoBehaviour
         set { _isSelect = value; }
     }
 
+    public Material originalMat;
+    public Material transMat;
+
     void Start()
     {
         opaqueBlock o = GameObject.Find("pivot").GetComponent<opaqueBlock>();

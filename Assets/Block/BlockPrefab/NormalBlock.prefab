@@ -151,6 +151,8 @@ MonoBehaviour:
   _selectedMat: {fileID: 2100000, guid: 20a892e6ff64aaa4b84c1d3b764eb8d7, type: 2}
   _interval: 0.5
   _isCancel: 0
+  originalMat: {fileID: 2100000, guid: 1e85f07425858d340bc245d78ca3c112, type: 2}
+  transMat: {fileID: 2100000, guid: c9ce305cd28cc624d88dc8971bc39a96, type: 2}
 --- !u!1 &4247637634757609894
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,6 +13,7 @@ public class MoveObjMagic : MonoBehaviour
     public Button _Down;
     public Button _Left;
     public Button _Right;
+    [SerializeField] GameObject _Kaijo;
 
     PlayerMove _Player;
 
@@ -130,6 +131,7 @@ public class MoveObjMagic : MonoBehaviour
     {
         if (!_arrowKey) return;
         _arrowKey.SetActive(isSwitch);
+        _Kaijo.SetActive(isSwitch);
     }
 
 }

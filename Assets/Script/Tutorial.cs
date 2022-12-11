@@ -24,10 +24,14 @@ public class Tutorial : MonoBehaviour
     [SerializeField] GameObject[] _Check = null;
     [SerializeField] GameObject[] _CheckBox = null;
     [SerializeField] GameObject[] _Panel = null;
+    [SerializeField] GameObject _BlackPanel = null;
+
 
     PlayerMove _player;
     [SerializeField] GameObject[] _Object = null;
-    [SerializeField] int time = 20;
+    [SerializeField] int changeTime = 20;
+    int blackTimer = 1;
+
     private void Start()
     {
         PlayerMove p = GameObject.Find("player").GetComponent<PlayerMove>();
@@ -37,6 +41,16 @@ public class Tutorial : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (blackTimer > 0) 
+        {
+            for (int i = 0; i < 6; i++)
+            {
+                _Object[i].SetActive(false);
+            }
+            _BlackPanel.SetActive(false);
+            blackTimer--; 
+        }
+
         _WASDText.SetActive(faze1flag);
         _JumpText.SetActive(faze1flag);
 
@@ -83,11 +97,11 @@ public class Tutorial : MonoBehaviour
 
         if (faze4flag)
         {
-            if (time > 0) 
+            if (changeTime > 0) 
             {
-                time--;
+                changeTime--;
             }
-            if(time <= 0)
+            if(changeTime <= 0)
             {
                 faze4flag = false;
                 faze5flag = true;

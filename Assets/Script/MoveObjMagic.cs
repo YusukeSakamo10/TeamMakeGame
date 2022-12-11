@@ -6,9 +6,9 @@ public class MoveObjMagic : MonoBehaviour
     ObjectCameraController obj;
     CubeController _saveCube;
     [SerializeField] LayerMask _layerMask;
-    Button button;
+    Button _cancelButton;
     public float rayDist = 18;
-
+    GameObject _arrowKey;
     public Button _Up;
     public Button _Down;
     public Button _Left;
@@ -26,12 +26,20 @@ public class MoveObjMagic : MonoBehaviour
 
         //キャンセルボタンを保存する
         Button b = GameObject.Find("Cancel").GetComponent<Button>();
-        if (b != null) button = b.GetComponent<Button>();
+        if (b != null) _cancelButton = b.GetComponent<Button>();
         //選択時のカメラを探してきて保存する
         obj = GameObject.Find("ObjectCAM").GetComponent<ObjectCameraController>();
 
         opaqueBlock o = GameObject.Find("pivot").GetComponent<opaqueBlock>();
         if (o != null) pivot = o.GetComponent<opaqueBlock>();
+
+        GameObject setKey = GameObject.Find("ObjctKeyController");
+        if (setKey) {
+            _arrowKey = setKey;
+            StateChangeButton(false);
+        }
+        
+        
     }
 
     void Update()
@@ -48,11 +56,11 @@ public class MoveObjMagic : MonoBehaviour
             Transform o = hit.collider.gameObject.GetComponent<Transform>();
             //ついてるギミック関数を受け取る
             Gimmick g = hit.collider.gameObject.GetComponent<Gimmick>();
-            
+
             //オブジェクトを動かす関数を受け取る
             CubeController _cube = hit.collider.gameObject.GetComponent<CubeController>();
             //　↑　これ選択されたときに入れたほうがいいんじゃない？ 物によって？
-            
+
             if (g)
             {
                 //オブジェクトが選択されていなければいろを変える
@@ -67,7 +75,8 @@ public class MoveObjMagic : MonoBehaviour
                     //消してもいいと思うけど
                     //仮に選択されたオブジェクトがまだあれば消す関数を実施
                     if (_saveCube) ObjFocusCameraClear();
-
+                    //矢印をオブジェクトが選択されたときのみ描画
+                    if (_arrowKey) StateChangeButton(true);
                     //ピポットにトランスフォームを送る
                     pivot._EndTrans = _cube.transform;
 
@@ -75,7 +84,7 @@ public class MoveObjMagic : MonoBehaviour
                     g.IsSelect = true;
                     //キャンセルボタンに、選択されたオブジェクトのギミックコンポーネントより
                     //キャンセルされたら呼ぶ関数を割り当てる
-                    if (button) button.onClick.AddListener(g.SelectCancel);
+                    if (_cancelButton) _cancelButton.onClick.AddListener(g.SelectCancel);
                     //撮る対象をオブジェクトを撮るカメラに割り当てる
                     obj.SelectObj = g.gameObject;
                     //動かす用のクラスのほうに選択されたことを伝える
@@ -93,6 +102,7 @@ public class MoveObjMagic : MonoBehaviour
                 }
             }
         }
+
     }
     /// <summary>
     /// オブジェクトに対するカメラを解除する
@@ -101,6 +111,7 @@ public class MoveObjMagic : MonoBehaviour
     {
         //カメラの見るオブジェクトを解除
         obj.SelectObj = null;
+        StateChangeButton(false);
         //仮に選択されたオブジェクトがあれば選択を解除
         if (_saveCube)
         {
@@ -110,6 +121,15 @@ public class MoveObjMagic : MonoBehaviour
             //オブジェクト完全解除
             _saveCube = null;
         }
+    }
+    /// <summary>
+    /// 矢印ボタンの描画のオンオフ
+    /// </summary>
+    /// <param name="isSwitch"></param>
+    private void StateChangeButton(bool isSwitch)
+    {
+        if (!_arrowKey) return;
+        _arrowKey.SetActive(isSwitch);
     }
 
 }

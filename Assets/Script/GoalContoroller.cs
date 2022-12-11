@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GoalContoroller : MonoBehaviour
 {
     public GameObject GoalText;
+    public GameObject ChaneScene;
 
     // Use this for initialization
     void Start()
@@ -27,7 +29,7 @@ public class GoalContoroller : MonoBehaviour
         if (collider.gameObject.tag == "Player")
         {
             GoalText.SetActive(true);
-
+            ChaneScene.SetActive(true);
         }
     }
 }

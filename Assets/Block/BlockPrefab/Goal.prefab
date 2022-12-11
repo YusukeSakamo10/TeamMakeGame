@@ -211,3 +211,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GoalText: {fileID: 0}
+  ChaneScene: {fileID: 0}

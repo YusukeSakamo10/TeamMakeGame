@@ -33,7 +33,7 @@ public class Tutorial : MonoBehaviour
             {
                 Debug.Log("QAAAAAAA");
                 WASDflag = true;
-                _Check[0].SetActive(true);
+                _Check[1].SetActive(true);
             }
         }
 
@@ -42,7 +42,7 @@ public class Tutorial : MonoBehaviour
             if (Input.GetKey(KeyCode.Space))
             {
                 JumpFlag = true;
-                _Check[1].SetActive(true);
+                _Check[2].SetActive(true);
             }
         }
     }
@@ -51,7 +51,7 @@ public class Tutorial : MonoBehaviour
     {
         if(WASDflag && JumpFlag && faze1flag)
         {
-            for(int i = 0; i < 2; i++)
+            for(int i = 1; i < 3; i++)
             {
                 _Check[i].SetActive(false);
                 _CheckBox[i].SetActive(false);

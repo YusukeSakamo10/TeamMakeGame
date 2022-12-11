@@ -28,7 +28,6 @@ public class Tutorial : MonoBehaviour
     PlayerMove _player;
     [SerializeField] GameObject[] _Object = null;
     [SerializeField] int time = 20;
-    [SerializeField] int changeTime = 20;
     private void Start()
     {
         PlayerMove p = GameObject.Find("player").GetComponent<PlayerMove>();

@@ -7,6 +7,7 @@ public class MoveObjMagic : MonoBehaviour
     CubeController _saveCube;
     [SerializeField] LayerMask _layerMask;
     Button _cancelButton;
+    [SerializeField] GameObject _cancelButtonIsSet;
     public float rayDist = 18;
     GameObject _arrowKey;
     public Button _Up;
@@ -27,6 +28,7 @@ public class MoveObjMagic : MonoBehaviour
         //キャンセルボタンを保存する
         Button b = GameObject.Find("Cancel").GetComponent<Button>();
         if (b != null) _cancelButton = b.GetComponent<Button>();
+        
         //選択時のカメラを探してきて保存する
         obj = GameObject.Find("ObjectCAM").GetComponent<ObjectCameraController>();
 
@@ -130,6 +132,7 @@ public class MoveObjMagic : MonoBehaviour
     {
         if (!_arrowKey) return;
         _arrowKey.SetActive(isSwitch);
+        _cancelButtonIsSet.SetActive(isSwitch);
     }
 
 }

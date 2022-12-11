@@ -447,9 +447,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 316eab73f2127104f8417b083a03f23b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _focusMat: {fileID: 2100000, guid: 0b406c6650aadb447bf7f679845f8395, type: 2}
-  _selectedMat: {fileID: 2100000, guid: 20a892e6ff64aaa4b84c1d3b764eb8d7, type: 2}
-  _interval: 0.5
+  _outLineMat: {fileID: 2100000, guid: 66e4e62cbfba98748ba5921f912bbd6b, type: 2}
+  _interval: 0.1
   _isCancel: 0
-  originalMat: {fileID: -3846018093981099296, guid: 52c5e71ff484f9348b1fe473be88374d, type: 3}
+  originalMat: {fileID: 2100000, guid: f5354cbe5c4332142871e713fdca4eda, type: 2}
   transMat: {fileID: 2100000, guid: a6c15b8532722ac4f8ada932a48e8192, type: 2}

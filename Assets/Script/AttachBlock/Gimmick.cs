@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class Gimmick : MonoBehaviour
 {
-    [SerializeField] Material _focusMat;
-    [SerializeField] Material _selectedMat;
-    [SerializeField] float _interval = 0.5f;
+    [SerializeField] Material _outLineMat;
+    Material _selectedMat;
+    [SerializeField] float _interval = 0.2f;
     Material _original;
     Renderer _renderer;
     float _timer;
@@ -30,7 +30,7 @@ public class Gimmick : MonoBehaviour
 
         _gameManager = GameObject.Find("GameManager").GetComponent<GameObject>();
         _renderer = GetComponent<Renderer>();
-        _original = _renderer.material;
+        _selectedMat = _renderer.material;
     }
 
 
@@ -44,7 +44,7 @@ public class Gimmick : MonoBehaviour
 
                 if (_timer < 0)
                 {
-                    _renderer.material = _original;
+                    _renderer.material = _selectedMat;
                 }
             }
         }
@@ -55,14 +55,14 @@ public class Gimmick : MonoBehaviour
     {
         if (_isSelect)
         {
-            _renderer.material = _selectedMat;
+            _renderer.material = _outLineMat;
             Controll();
         }
     }
 
     public void ChangeColor()
     {
-        _renderer.material = _focusMat;
+        _renderer.material = _outLineMat;
         _timer = _interval;
     }
 

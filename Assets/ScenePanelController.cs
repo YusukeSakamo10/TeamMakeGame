@@ -22,6 +22,6 @@ public class ScenePanelController : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        _panel.SetActive(false);
+        if(_panel)_panel.SetActive(false);
     }
 }

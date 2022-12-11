@@ -332,6 +332,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: BookDex_wCollision (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 2650859019664197315, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8449043077419942712, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
 --- !u!224 &78815855
@@ -465,6 +473,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: BookDex_wCollision (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 2650859019664197315, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8449043077419942712, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
 --- !u!1 &121617469
@@ -588,6 +604,14 @@ PrefabInstance:
     - target: {fileID: 2077991315632215462, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
       propertyPath: m_Name
       value: BookDex_wCollision (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2650859019664197315, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8449043077419942712, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
@@ -1291,6 +1315,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: BookDex_wCollision (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 2650859019664197315, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8449043077419942712, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
 --- !u!1 &285824068
@@ -1655,6 +1687,14 @@ PrefabInstance:
     - target: {fileID: 2077991315632215462, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
       propertyPath: m_Name
       value: BookDex_wCollision (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2650859019664197315, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8449043077419942712, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
@@ -3611,6 +3651,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: BookDex_wCollision (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2650859019664197315, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8449043077419942712, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
 --- !u!1 &645033962
@@ -3747,6 +3795,14 @@ PrefabInstance:
     - target: {fileID: 2077991315632215462, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
       propertyPath: m_Name
       value: BookDex_wCollision (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2650859019664197315, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8449043077419942712, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
@@ -5022,6 +5078,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: BookDex_wCollision (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 2650859019664197315, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8449043077419942712, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
 --- !u!1 &819104296
@@ -5609,6 +5673,14 @@ PrefabInstance:
     - target: {fileID: 2077991315632215462, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
       propertyPath: m_Name
       value: BookDex_wCollision (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2650859019664197315, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8449043077419942712, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
@@ -6846,7 +6918,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1202345200}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10}
+  m_LocalPosition: {x: -0.56253266, y: 6, z: -19.350246}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7849,6 +7921,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: BookDex_wCollision (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 2650859019664197315, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8449043077419942712, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
 --- !u!1001 &1430980791
@@ -7905,6 +7985,14 @@ PrefabInstance:
     - target: {fileID: 2077991315632215462, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
       propertyPath: m_Name
       value: BookDex_wCollision (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2650859019664197315, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8449043077419942712, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
@@ -8543,6 +8631,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: BookDex_wCollision (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 2650859019664197315, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8449043077419942712, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
 --- !u!1 &1538234198
@@ -8734,7 +8830,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1583963970}
-  m_LocalRotation: {x: 0.14953415, y: 0.070391014, z: -0.010673257, w: 0.98619}
+  m_LocalRotation: {x: 0.14953415, y: 0.07039098, z: -0.010673253, w: 0.98619}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -9077,6 +9173,14 @@ PrefabInstance:
     - target: {fileID: 2077991315632215462, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
       propertyPath: m_Name
       value: BookDex_wCollision (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2650859019664197315, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8449043077419942712, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
@@ -9742,6 +9846,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: BookDex_wCollision (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 2650859019664197315, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8449043077419942712, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
 --- !u!1001 &1716575079
@@ -10359,6 +10471,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: BookDex_wCollision (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 2650859019664197315, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8449043077419942712, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
 --- !u!1 &1826720840
@@ -10549,6 +10669,14 @@ PrefabInstance:
     - target: {fileID: 2077991315632215462, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
       propertyPath: m_Name
       value: BookDex_wCollision (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2650859019664197315, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8449043077419942712, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
@@ -11460,6 +11588,14 @@ PrefabInstance:
     - target: {fileID: 2077991315632215462, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
       propertyPath: m_Name
       value: BookDex_wCollision (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2650859019664197315, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8449043077419942712, guid: cc5bca8e443e9104d8e757d723583229, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc5bca8e443e9104d8e757d723583229, type: 3}

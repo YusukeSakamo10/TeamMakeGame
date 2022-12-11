@@ -13,7 +13,8 @@ public class ScenePanelController : MonoBehaviour
             GameObject panel = GameObject.Find("NonScene");
             if(panel != null)_panel = panel;
         }
-        _panel.SetActive(false);
+        
+        if(_panel)_panel.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)

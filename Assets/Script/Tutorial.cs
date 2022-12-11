@@ -7,25 +7,39 @@ public class Tutorial : MonoBehaviour
 {
     bool WASDflag = false;
     bool JumpFlag = false;
-    [SerializeField] GameObject _WASD = null;
-    [SerializeField] GameObject _Jump = null;
-    [SerializeField] GameObject _Drag = null;
-    bool faze1flag = true;
+    [SerializeField] GameObject _WASDText = null;
+    [SerializeField] GameObject _JumpText = null;
+    [SerializeField] GameObject _DragText = null;
+    [SerializeField] GameObject _ClickText = null;
+    [SerializeField] GameObject _BlockMoveText = null;
+    [SerializeField] GameObject _GoalMoveText = null;
+    [SerializeField] GameObject _NokorikaisuText = null;
 
-    bool mouseDragFlag = false;
-    bool mouseClickFlag = false;
-    bool blockMoveFlag = false;
-    bool faze2flag = true;
+    bool faze1flag = true;
+    bool faze2flag = false;
+    bool faze3flag = false;
+    bool faze4flag = false;
+    bool faze5flag = false;
 
     [SerializeField] GameObject[] _Check = null;
     [SerializeField] GameObject[] _CheckBox = null;
     [SerializeField] GameObject[] _Panel = null;
 
+    PlayerMove _player;
+    [SerializeField] GameObject[] _Object = null;
+    [SerializeField] int time = 20;
+    [SerializeField] int changeTime = 20;
+    private void Start()
+    {
+        PlayerMove p = GameObject.Find("player").GetComponent<PlayerMove>();
+        if (p != null) _player = p.GetComponent<PlayerMove>();
+    }
+
     // Update is called once per frame
     void Update()
     {
-        _WASD.SetActive(faze1flag);
-        _Jump.SetActive(faze1flag);
+        _WASDText.SetActive(faze1flag);
+        _JumpText.SetActive(faze1flag);
 
         if (!WASDflag)
         {
@@ -45,6 +59,56 @@ public class Tutorial : MonoBehaviour
                 _Check[2].SetActive(true);
             }
         }
+
+
+        if(faze2flag && Input.GetMouseButtonDown(1))
+        {
+            _Check[2].SetActive(true);
+        }
+
+        if(faze2flag && _player.transform.position.z < -18)
+        {
+            faze2flag = false;
+            faze3flag = true;
+            _Check[2].SetActive(false);
+            _DragText.SetActive(false);
+            _ClickText.SetActive(true);
+        }
+
+        if(faze3flag && !_player.IsMove)
+        {
+            faze3flag = false;
+            faze4flag = true;
+            _Check[2].SetActive(true);
+        }
+
+        if (faze4flag)
+        {
+            if (time > 0) 
+            {
+                time--;
+            }
+            if(time <= 0)
+            {
+                faze4flag = false;
+                faze5flag = true;
+                _ClickText.SetActive(false);
+                _Check[2].SetActive(false);
+                _CheckBox[2].SetActive(false);
+                _BlockMoveText.SetActive(true);
+                _Panel[0].SetActive(true);
+                _Panel[1].SetActive(false);
+                _Panel[2].SetActive(true);
+                _NokorikaisuText.SetActive(true);
+            }
+        }
+        if(faze5flag && _player.IsMove)
+        {
+            _NokorikaisuText.SetActive(false);
+            _BlockMoveText.SetActive(false);
+            _Panel[2].SetActive(false);
+            _GoalMoveText.SetActive(true);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -56,12 +120,18 @@ public class Tutorial : MonoBehaviour
                 _Check[i].SetActive(false);
                 _CheckBox[i].SetActive(false);
             }
+
+            for(int i = 0; i < 6;i++)
+            {
+                _Object[i].SetActive(true);
+            }
+
             _Panel[0].SetActive(false);
             _Panel[1].SetActive(true);
 
             faze1flag = false;
             faze2flag = true;
-            _Drag.SetActive(true);
+            _DragText.SetActive(true);
             _CheckBox[2].SetActive(true);
         }
     }

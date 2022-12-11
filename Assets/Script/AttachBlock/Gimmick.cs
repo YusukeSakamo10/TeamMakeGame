@@ -10,7 +10,7 @@ public class Gimmick : MonoBehaviour
     float _timer;
     GameObject _gameManager;
     opaqueBlock pivot;
-
+    CubeController _cubeController;
 
     bool _isSelect = false;
     public bool _isCancel = false;
@@ -31,6 +31,10 @@ public class Gimmick : MonoBehaviour
         _gameManager = GameObject.Find("GameManager").GetComponent<GameObject>();
         _renderer = GetComponent<Renderer>();
         _selectedMat = _renderer.material;
+
+        //動かすようにクラスを受け取る。とりあえずこれは上に書くべきもの、
+        CubeController cubeController = GetComponent<CubeController>();
+        if(cubeController) _cubeController = cubeController;
     }
 
 
@@ -49,6 +53,8 @@ public class Gimmick : MonoBehaviour
             }
         }
         else ChangeSelectColor();
+
+        Controll();
     }
 
     public void ChangeSelectColor()
@@ -56,7 +62,6 @@ public class Gimmick : MonoBehaviour
         if (_isSelect)
         {
             _renderer.material = _outLineMat;
-            Controll();
         }
     }
 
@@ -71,9 +76,7 @@ public class Gimmick : MonoBehaviour
     //
     public void Controll()
     {
-        //動かすようにクラスを受け取る。とりあえずこれは上に書くべきもの、
-        CubeController cubeController = GetComponent<CubeController>();
-
+     
         if (_isCancel)
         {
             //上で書いた方が良いのかもしれないプレイヤを動かすために一時的に探して動けるようにする
@@ -86,10 +89,10 @@ public class Gimmick : MonoBehaviour
             pivot._EndTrans = null;
             //_Up.onClick.removeEventListener(cubeController.Forward);
         }
-        if (cubeController != null)
+        if (_cubeController != null)
         {
             //選択されたときと解除されたときに同じ状態になるので自分の状態を送る
-            cubeController.IsSelect = _isSelect;
+            _cubeController.IsSelect = _isSelect;
         }
 
     }

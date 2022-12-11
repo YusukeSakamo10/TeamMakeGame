@@ -27,7 +27,12 @@ public class opaqueBlock : MonoBehaviour
     {
         if (cinemaChine.SelectObj == null)
         {
+            box.isTrigger = false ;
             box.size = new Vector3(0, 0, 0);
+        }
+        else
+        {
+            box.isTrigger = true;
         }
         if (startPos && endPos)
         {

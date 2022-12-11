@@ -12,6 +12,7 @@ TagManager:
   - Ground
   - Block
   - Enemy
+  - Goal
   layers:
   - Default
   - TransparentFX

@@ -16,11 +16,23 @@ public class playerAnime : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
         {
-            _animator.SetFloat("Speed", 1);
+            if (_playerMove.IsGround && _playerMove.IsMove)
+            {
+                _animator.SetFloat("Speed", 1);
+            }
         }
         else
         {
             _animator.SetFloat("Speed", 0);
+        }
+
+        if(!_playerMove.IsGround && _playerMove.IsMove)
+        {
+            _animator.SetBool("Jump", true);
+        }
+        else
+        {
+            _animator.SetBool("Jump", false);
         }
     }
 }

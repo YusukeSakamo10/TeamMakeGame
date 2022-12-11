@@ -16,6 +16,12 @@ public class PlayerMove : MonoBehaviour
     bool _isMove = true;
     bool _isGround = true;
 
+    public bool IsGround
+    {
+        get { return _isGround; }
+        set { _isGround = value; }
+    }
+
     public bool IsMove
     {
         get { return _isMove; }

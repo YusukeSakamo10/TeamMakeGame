@@ -446,10 +446,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 316eab73f2127104f8417b083a03f23b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _focusMat: {fileID: 2100000, guid: 0b406c6650aadb447bf7f679845f8395, type: 2}
-  _selectedMat: {fileID: 2100000, guid: 20a892e6ff64aaa4b84c1d3b764eb8d7, type: 2}
-  _interval: 0.5
+  _outLineMat: {fileID: 2100000, guid: 9d2f201a8e2862243aab7a6783d5f0b4, type: 2}
+  _interval: 0.1
   _isCancel: 0
+  originalMat: {fileID: 2100000, guid: 160f2c419d4b9e44095fec18c4e1f4e0, type: 2}
+  transMat: {fileID: 2100000, guid: 5f72a3ac9def2d1448cddd1a85b5b732, type: 2}
 --- !u!114 &2834633620063321
 MonoBehaviour:
   m_ObjectHideFlags: 0

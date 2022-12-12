@@ -11,6 +11,10 @@ public class GameManager : MonoBehaviour
     [Tooltip("jumpした時に呼び出す処理")]
     [SerializeField] UnityEvent _onJump = null;
 
+    [Tooltip("buttonを押した時に呼び出す処理")]
+    [SerializeField] UnityEvent _onShoot = null;
+
+
     //[Tooltip("残り移動回数の初期値")]
     //[SerializeField] int _initialMove = 5;
 
@@ -40,6 +44,22 @@ public class GameManager : MonoBehaviour
         _moveText = _moveObject.GetComponent<Text>();
        _moveText.text = string.Format("{0:000}", maxMoveCount);
     }
+
+
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            _onJump.Invoke();
+        }
+
+        if (Input.GetButtonDown("Fire1"))
+        { 
+            _onShoot.Invoke();
+        }
+
+    }
+
 
     public void MoveCount()
     {

@@ -32,6 +32,7 @@ public class Tutorial : MonoBehaviour
     [SerializeField] int changeTime = 20;
     int blackTimer = 1;
 
+    [SerializeField] GameObject _particle;
     private void Start()
     {
         PlayerMove p = GameObject.Find("player").GetComponent<PlayerMove>();
@@ -72,7 +73,10 @@ public class Tutorial : MonoBehaviour
                 _Check[2].SetActive(true);
             }
         }
-
+        if (_Object[0].active == true)
+        {
+            _particle.SetActive(false);
+        }
 
         if(faze2flag && Input.GetMouseButtonDown(1))
         {

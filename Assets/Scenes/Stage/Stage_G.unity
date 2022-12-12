@@ -736,7 +736,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 260103158}
-  m_LocalRotation: {x: 0.30837777, y: -0.02253237, z: 0.007306738, w: 0.95096904}
+  m_LocalRotation: {x: 0.30837777, y: -0.022532493, z: 0.007306778, w: 0.95096904}
   m_LocalPosition: {x: -0.000000059604645, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1761,7 +1761,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 510553327}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.04881212, y: 6, z: -54.40554}
+  m_LocalPosition: {x: 0.048813164, y: 6, z: -54.40554}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3034,8 +3034,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.25146863, y: -0.022925893, z: 0.005958338, w: 0.96757555}
-  m_LocalPosition: {x: 0.04881212, y: 6, z: -54.40554}
+  m_LocalRotation: {x: 0.25146863, y: -0.022925945, z: 0.0059583522, w: 0.96757555}
+  m_LocalPosition: {x: 0.048813164, y: 6, z: -54.40554}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3509,19 +3509,7 @@ MonoBehaviour:
   maxMoveCount: 2
   _onJump:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1556400604}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: PlayOneShot
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 1661ee40bf5793847a2d284dfcdd8678, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   _onShoot:
     m_PersistentCalls:
       m_Calls: []
@@ -3952,7 +3940,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1202345200}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.048811942, y: 6, z: -44.40554}
+  m_LocalPosition: {x: 0.048812896, y: 6, z: -44.40554}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4766,7 +4754,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1302064952}
-  m_LocalRotation: {x: 0.25146863, y: -0.02292587, z: 0.0059583327, w: 0.96757555}
+  m_LocalRotation: {x: 0.25146863, y: -0.02292596, z: 0.005958356, w: 0.96757555}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5315,11 +5303,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 629498d38043c794c845a2c5839c7b1d, type: 3}
---- !u!82 &1556400604 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 8355917766482928764, guid: 629498d38043c794c845a2c5839c7b1d, type: 3}
-  m_PrefabInstance: {fileID: 1556400603}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1583453035
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5463,7 +5446,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1583963970}
-  m_LocalRotation: {x: 0.19526717, y: -0.023231236, z: 0.0046266853, w: 0.980464}
+  m_LocalRotation: {x: 0.19526716, y: -0.023231363, z: 0.00462671, w: 0.980464}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

@@ -1183,7 +1183,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 260103158}
-  m_LocalRotation: {x: 0.30778998, y: 0.062615044, z: -0.020304257, w: 0.94917464}
+  m_LocalRotation: {x: 0.30778998, y: 0.06261502, z: -0.020304244, w: 0.94917464}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3578,11 +3578,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!82 &557935166 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 8355917766482928764, guid: 629498d38043c794c845a2c5839c7b1d, type: 3}
-  m_PrefabInstance: {fileID: 8355917765933420098}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &557935167 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8355917766482928765, guid: 629498d38043c794c845a2c5839c7b1d, type: 3}
@@ -6622,19 +6617,7 @@ MonoBehaviour:
   maxMoveCount: 100
   _onJump:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 557935166}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: PlayOneShot
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 1661ee40bf5793847a2d284dfcdd8678, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   _onShoot:
     m_PersistentCalls:
       m_Calls: []

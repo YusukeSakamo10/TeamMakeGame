@@ -28,6 +28,7 @@ public class GoalContoroller : MonoBehaviour
     {
         if (collider.gameObject.tag == "Player")
         {
+            GetComponent<AudioSource>().Play();
             GoalText.SetActive(true);
             ChaneScene.SetActive(true);
         }

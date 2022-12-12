@@ -18,7 +18,7 @@ public class MoveObjMagic : MonoBehaviour
     PlayerMove _Player;
 
     opaqueBlock pivot;
-
+    bool isStart = false;
     void Start()
     {
         //プレイヤーを探して受け取る
@@ -38,7 +38,6 @@ public class MoveObjMagic : MonoBehaviour
         GameObject setKey = GameObject.Find("ObjctKeyController");
         if (setKey) {
             _arrowKey = setKey;
-            StateChangeButton(false);
         }
         
         
@@ -46,7 +45,11 @@ public class MoveObjMagic : MonoBehaviour
 
     void Update()
     {
-        //レイキャスト
+        if (!isStart)
+        {
+            isStart = true;
+            StateChangeButton(false);
+        } //レイキャスト
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
         Debug.DrawRay(Camera.main.transform.position, ray.direction * rayDist, Color.green);

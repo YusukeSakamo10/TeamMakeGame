@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 7de728c1a3b465248993d58603bc1d84, type: 2}
   m_LightingSettings: {fileID: 1710807893}
 --- !u!196 &4
 NavMeshSettings:
@@ -3220,7 +3220,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.2515395, y: 0.0021987762, z: -0.0005714544, w: 0.96784437}
+  m_LocalRotation: {x: 0.2515395, y: 0.0021987928, z: -0.0005714587, w: 0.96784437}
   m_LocalPosition: {x: -0.32814077, y: 6, z: -57.669956}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3725,6 +3725,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxMoveCount: 4
   _onJump:
+    m_PersistentCalls:
+      m_Calls: []
+  _onShoot:
     m_PersistentCalls:
       m_Calls: []
   _moveText: {fileID: 0}
@@ -4967,7 +4970,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1302064952}
-  m_LocalRotation: {x: 0.2515395, y: 0.0021987758, z: -0.0005714544, w: 0.96784437}
+  m_LocalRotation: {x: 0.2515395, y: 0.0021987923, z: -0.0005714587, w: 0.96784437}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5539,7 +5542,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1583963970}
-  m_LocalRotation: {x: 0.19532236, y: 0.0022280556, z: -0.0004437371, w: 0.9807365}
+  m_LocalRotation: {x: 0.19532236, y: 0.0022280896, z: -0.00044374383, w: 0.9807365}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

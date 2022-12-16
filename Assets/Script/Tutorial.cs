@@ -73,7 +73,7 @@ public class Tutorial : MonoBehaviour
                 _Check[2].SetActive(true);
             }
         }
-        if (_Object[0].active == true)
+        if (_Object[0].activeSelf == true)
         {
             _particle.SetActive(false);
         }

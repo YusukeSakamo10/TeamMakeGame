@@ -8,7 +8,6 @@ public class PlayerMove : MonoBehaviour
     public Rigidbody _rb;
     float h;
     float v;
-    float y;
     public float _jumpPower = 10;
     [SerializeField] LayerMask _layerMask;
     public float groundFlow = 3.3f;
@@ -46,9 +45,8 @@ public class PlayerMove : MonoBehaviour
         {
             h = Input.GetAxisRaw("Horizontal");
             v = Input.GetAxisRaw("Vertical");
-            y = Input.GetAxisRaw("Jump");
         }
-        else { h = 0; v = 0; y = 0; }
+        else { h = 0; v = 0;}
 
         Vector3 rayPosition = new(transform.position.x, transform.position.y + 3, transform.position.z);
 
@@ -63,11 +61,11 @@ public class PlayerMove : MonoBehaviour
         }
         else { _isGround = false; }
 
-        if(_isGround)
+        if(_isGround && _isMove)
         {
             if(Input.GetKeyDown(KeyCode.Space))
             {
-                _rb.AddForce(Vector3.up * _jumpPower,ForceMode.Impulse);
+               _rb.AddForce(Vector3.up * _jumpPower,ForceMode.Impulse);
             }
         }
         else 

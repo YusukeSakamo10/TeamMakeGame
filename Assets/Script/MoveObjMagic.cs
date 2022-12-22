@@ -19,6 +19,8 @@ public class MoveObjMagic : MonoBehaviour
 
     opaqueBlock pivot;
     bool isStart = false;
+
+    Transform _preBlockTrans;
     void Start()
     {
         //プレイヤーを探して受け取る
@@ -28,7 +30,7 @@ public class MoveObjMagic : MonoBehaviour
         //キャンセルボタンを保存する
         Button b = GameObject.Find("Cancel").GetComponent<Button>();
         if (b != null) _cancelButton = b.GetComponent<Button>();
-        
+
         //選択時のカメラを探してきて保存する
         obj = GameObject.Find("ObjectCAM").GetComponent<ObjectCameraController>();
 
@@ -36,11 +38,12 @@ public class MoveObjMagic : MonoBehaviour
         if (o != null) pivot = o.GetComponent<opaqueBlock>();
 
         GameObject setKey = GameObject.Find("ObjctKeyController");
-        if (setKey) {
+        if (setKey)
+        {
             _arrowKey = setKey;
         }
-        
-        
+
+
     }
 
     void Update()
@@ -49,7 +52,8 @@ public class MoveObjMagic : MonoBehaviour
         {
             isStart = true;
             StateChangeButton(false);
-        } //レイキャスト
+        }
+        //レイキャスト
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
         Debug.DrawRay(Camera.main.transform.position, ray.direction * rayDist, Color.green);
@@ -98,6 +102,9 @@ public class MoveObjMagic : MonoBehaviour
                     _cube.SetPosChildBox();
                     //選択されたオブジェクトを一時このクラス内に保管する
                     _saveCube = _cube;
+                    //前のオブジェクトと今のオブジェクトが同じだったら
+                    _cube.Back(_preBlockTrans == _saveCube.transform);
+
                     //矢印にオブジェクトごとの操作を割り当てる
                     if (_Up) _Up.onClick.AddListener(_cube.Forward);
                     if (_Down) _Down.onClick.AddListener(_cube.Backward);
@@ -120,6 +127,8 @@ public class MoveObjMagic : MonoBehaviour
         //仮に選択されたオブジェクトがあれば選択を解除
         if (_saveCube)
         {
+            //一個戻す際、仮に解除した後も戻せるように
+            _preBlockTrans = _saveCube.transform;
             //選択オブジェクトを解除してから行動する用のコライダーなど消す
             _saveCube.IsSelect = false;
             _saveCube.SetPosChildBox();
@@ -137,5 +146,6 @@ public class MoveObjMagic : MonoBehaviour
         _arrowKey.SetActive(isSwitch);
         _cancelButtonIsSet.SetActive(isSwitch);
     }
+
 
 }

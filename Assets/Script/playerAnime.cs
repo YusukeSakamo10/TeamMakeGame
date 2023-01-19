@@ -26,7 +26,7 @@ public class playerAnime : MonoBehaviour
             _animator.SetFloat("Speed", 0);
         }
 
-        if(!_playerMove.IsGround && _playerMove.IsMove)
+        if (!_playerMove.IsGround && _playerMove.IsMove)
         {
             _animator.SetBool("Jump", true);
         }
@@ -34,5 +34,15 @@ public class playerAnime : MonoBehaviour
         {
             _animator.SetBool("Jump", false);
         }
+
+        if (!_playerMove.IsMove)
+        {
+            _animator.SetBool("Select", true);
+        }
+        else
+        {
+            _animator.SetBool("Select", false);
+        }
+
     }
 }

@@ -12,8 +12,8 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] LayerMask _layerMask;
     public float groundFlow = 3.3f;
 
-    bool _isMove = true;
-    bool _isGround = true;
+    [SerializeField] bool _isMove = true;
+    [SerializeField] bool _isGround = true;
 
     public bool IsGround
     {

@@ -24,7 +24,7 @@ public class MoveObjMagic : MonoBehaviour
     void Start()
     {
         //プレイヤーを探して受け取る
-        PlayerMove p = GameObject.Find("player").GetComponent<PlayerMove>();
+        PlayerMove p = GameObject.Find("Majo").GetComponent<PlayerMove>();
         if (p != null) _Player = p.GetComponent<PlayerMove>();
 
         //キャンセルボタンを保存する

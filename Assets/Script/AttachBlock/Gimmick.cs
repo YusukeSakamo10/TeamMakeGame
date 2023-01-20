@@ -80,7 +80,7 @@ public class Gimmick : MonoBehaviour
         if (_isCancel)
         {
             //上で書いた方が良いのかもしれないプレイヤを動かすために一時的に探して動けるようにする
-            PlayerMove p = GameObject.Find("player").GetComponent<PlayerMove>();
+            PlayerMove p = GameObject.Find("Majo").GetComponent<PlayerMove>();
             p.IsMove = true;
             //選択されたのを解除
             _isSelect = false;

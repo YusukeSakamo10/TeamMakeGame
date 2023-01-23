@@ -9,24 +9,27 @@ EditorBuildSettings:
     path: Assets/Scenes/Title.unity
     guid: a3f6776cbb251b04181f00d0329f10c2
   - enabled: 1
+    path: Assets/Scenes/Bace.unity
+    guid: d85150225c84482468321bcb4e4adf79
+  - enabled: 0
     path: Assets/Scenes/turtorial.unity
     guid: 556f997aebb86a94e99d71057912beef
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SelectStage.unity
     guid: 52c0012e0676566448543bdf785ff5bb
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Stage/Stage1.unity
     guid: a28ed9053f1b12e41afbf954ca60cf79
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Stage/Stage2.unity
     guid: 7ccc2f8dfc77c9649a31726a6883c40b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Stage/Stage3.unity
     guid: e8879e378ee50c447b9710f21380bf4e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Stage/Stage4.unity
     guid: ef359306c7056ec49b5f0bad29877a12
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Stage/Stage5.unity
     guid: 9dfb53e2d0f02394d99940f319a084ec
   m_configObjects: {}

@@ -19,7 +19,7 @@ public class MoveObjMagic : MonoBehaviour
 
     opaqueBlock pivot;
     bool isStart = false;
-
+    GameManager _gameManager;
     Transform _preBlockTrans;
     void Start()
     {
@@ -43,7 +43,8 @@ public class MoveObjMagic : MonoBehaviour
             _arrowKey = setKey;
         }
 
-
+        GameManager gm = GetComponent<GameManager>();
+        if(gm != null)_gameManager = gm;
     }
 
     void Update()
@@ -58,7 +59,7 @@ public class MoveObjMagic : MonoBehaviour
         RaycastHit hit;
         Debug.DrawRay(Camera.main.transform.position, ray.direction * rayDist, Color.green);
 
-        if (Physics.Raycast(ray, out hit, rayDist, _layerMask))
+        if (Physics.Raycast(ray, out hit, rayDist, _layerMask) && _gameManager.MoveCountValue != 0)
         {
             //当たったオブジェクトから
             //オブジェクトの座標系を保存
@@ -70,6 +71,7 @@ public class MoveObjMagic : MonoBehaviour
             CubeController _cube = hit.collider.gameObject.GetComponent<CubeController>();
             //　↑　これ選択されたときに入れたほうがいいんじゃない？ 物によって？
 
+            
             if (g)
             {
                 //オブジェクトが選択されていなければいろを変える

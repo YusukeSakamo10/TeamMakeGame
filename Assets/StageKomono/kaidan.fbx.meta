@@ -2,7 +2,13 @@ fileFormatVersion: 2
 guid: df6c053c37fd2944f91bf2f0242b4d6c
 ModelImporter:
   serializedVersion: 21300
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: 8003802758527247254
+    second: kaidan.001|kaidanOriru.002
+  - first:
+      74: 4153996469545713282
+    second: kaidan.001|Stage.002Action
   externalObjects: {}
   materials:
     materialImportMode: 2

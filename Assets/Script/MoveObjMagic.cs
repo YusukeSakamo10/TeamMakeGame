@@ -59,7 +59,7 @@ public class MoveObjMagic : MonoBehaviour
         RaycastHit hit;
         Debug.DrawRay(Camera.main.transform.position, ray.direction * rayDist, Color.green);
 
-        if (Physics.Raycast(ray, out hit, rayDist, _layerMask) && _gameManager.MoveCountValue != 0)
+        if (Physics.Raycast(ray, out hit, rayDist, _layerMask) && _gameManager.MoveCountValue != _gameManager.MaxMoveCount)
         {
             //当たったオブジェクトから
             //オブジェクトの座標系を保存

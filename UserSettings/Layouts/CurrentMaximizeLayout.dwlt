@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 47447
+  controlID: 49711
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -45,16 +45,18 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 553
+    x: 987
     y: 73
-    width: 911
+    width: 477
     height: 535
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
-  m_SerializedViewNames: []
-  m_SerializedViewValues: []
+  m_SerializedViewNames:
+  - UnityEditor.DeviceSimulation.SimulatorWindow
+  m_SerializedViewValues:
+  - C:\Users\yusuk\Desktop\TeamMakeGame\TeamMakeGame\Library\PlayModeViewStates\acb5cbe186c0b874c9e460fdb48cdc7f
   m_PlayModeViewName: GameView
   m_ShowGizmos: 0
   m_TargetDisplay: 0
@@ -86,7 +88,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -95,10 +97,10 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 911
+      width: 477
       height: 514
-    m_Scale: {x: 0.47447917, y: 0.47447917}
-    m_Translation: {x: 455.5, y: 257}
+    m_Scale: {x: 0.2484375, y: 0.2484375}
+    m_Translation: {x: 238.5, y: 257}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -106,12 +108,12 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
       x: -960
-      y: -541.64655
+      y: -1034.4655
       width: 1920
-      height: 1083.2931
+      height: 2068.931
     m_MinimalGUI: 1
-  m_defaultScale: 0.47447917
-  m_LastWindowPixelSize: {x: 911, y: 535}
+  m_defaultScale: 0.2484375
+  m_LastWindowPixelSize: {x: 477, y: 535}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -141,7 +143,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 47448
+  controlID: 49712
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -167,7 +169,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 47449
+  controlID: 49713
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -187,8 +189,8 @@ MonoBehaviour:
     y: 0
     width: 362
     height: 556
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -224,24 +226,24 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 42610100
-      m_LastClickedID: 90434
-      m_ExpandedIDs: 46a4feff82a5feff2ea8fefffcacfeff92b5feff92bafefff4befeffacc2feff90c6feff54cbfeff1a22ffff2422ffff8e23ffff2428ffffd237ffff9238ffff9638ffff9c38ffffa638ffffb039ffff7841fffff894fffff097ffffd89cffff3ea7ffff1caeffff2eb3ffff68efffff2cf2ffff36f2ffff76f4fffff2faffff5a660000c6660000ce6600007c670000f06700001e680000a8980000609b00004a9c0000a49c00005aa20000c4a200009ca40000a4a4000086a50000e2a5000074dd0000f0dd00004ade0000c2df000002e0000028f3000030f30000bef3000038f4000072f40000a25f010070620100786201000863010060630100be630100
+      scrollPos: {x: 0, y: 46}
+      m_SelectedIDs: fa62feff
+      m_LastClickedID: -105734
+      m_ExpandedIDs: 2c6cfefff26dfeff4a6efeff4874feff46a4feff82a5feff2ea8fefffcacfeff92b5feff92bafefff4befeffacc2feff90c6feff54cbfeff1a22ffff2422ffff8e23ffff2428ffffd237ffff9238ffff9638ffff9c38ffffa638ffffb039ffff7841fffff894fffff097ffffd89cffff3ea7ffff1caeffff2eb3ffff68efffff2cf2ffff36f2ffff76f4fffff2faffff5a660000c6660000ce6600007c670000f06700001e680000a8980000609b00004a9c0000a49c00005aa20000c4a200009ca40000a4a4000086a50000e2a5000074dd0000f0dd00004ade0000c2df000002e0000028f3000030f30000bef3000038f4000072f40000a25f010070620100786201000863010060630100be630100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: CM vcam2
+        m_OriginalName: CM vcam2
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: -105734
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 5}
       m_SearchString: 
@@ -268,7 +270,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 362
     y: 0
-    width: 191
+    width: 625
     height: 556
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
@@ -299,7 +301,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 362
     y: 73
-    width: 189
+    width: 623
     height: 535
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -365,9 +367,9 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 67.5, y: 86}
+      snapOffset: {x: -124.5, y: 86}
       snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
+      snapCorner: 1
       id: Orientation
       index: 0
       layout: 4
@@ -502,9 +504,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1799.5999, y: 989.69995, z: 0}
+    m_Target: {x: -3.5759056, y: 13.636398, z: -39.789406}
     speed: 2
-    m_Value: {x: 1799.5999, y: 989.69995, z: 0}
+    m_Value: {x: -3.5759056, y: 13.636398, z: -39.789406}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -551,13 +553,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.2224807, y: -0.6050783, z: 0.18170515, w: -0.74276197}
+    m_Target: {x: -0.44153848, y: 0.5254265, z: -0.3700169, w: -0.62641186}
     speed: 2
-    m_Value: {x: -0.22244406, y: -0.6049786, z: 0.18167521, w: -0.7426396}
+    m_Value: {x: -0.4548671, y: 0.5178029, z: -0.38236788, w: -0.61544365}
   m_Size:
-    m_Target: 81.394104
+    m_Target: 20.563522
     speed: 2
-    m_Value: 81.394104
+    m_Value: 19.67801
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -597,12 +599,12 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 553
+    x: 987
     y: 0
-    width: 913
+    width: 479
     height: 556
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 2}
   m_Panes:
   - {fileID: 2}
@@ -676,21 +678,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Block/BlockPrefab
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Block/BlockPrefab
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\yusuk\Desktop\TeamMakeGame\TeamMakeGame
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 30}
-    m_SelectedIDs: 1c6d0000
-    m_LastClickedID: 27932
+    m_SelectedIDs: fa630000
+    m_LastClickedID: 25594
     m_ExpandedIDs: 00000000f4630000f6630000f8630000fa63000012640000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -744,8 +746,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 42610100
-    m_LastClickedInstanceID: 90434
+    m_SelectedInstanceIDs: fa62feff
+    m_LastClickedInstanceID: -105734
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
@@ -822,8 +824,8 @@ MonoBehaviour:
     y: 0
     width: 454
     height: 939
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}

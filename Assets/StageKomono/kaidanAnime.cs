@@ -8,7 +8,13 @@ public class kaidanAnime : MonoBehaviour
     [SerializeField] Vector3[] target;
     [SerializeField] float step = 4f;
     [SerializeField] Vector3[] StartPos = { new Vector3(0, 0, 0), new Vector3(0, 0, 0), new Vector3(0, 0, 0) };
-    [SerializeField] bool hitFlag = false;
+    bool hitFlag = false;
+
+    public bool isHit
+    {
+        get { return hitFlag; }
+        set { hitFlag = value; }
+    }
 
     private void Start()
     {
@@ -20,11 +26,19 @@ public class kaidanAnime : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        hitFlag = true;
+        for (int i = 0; i < 3; i++)
+        {
+            kaidan[i].SetActive(true);
+        }
+            hitFlag = true;
     }
 
     private void OnTriggerExit(Collider other)
     {
+        for (int i = 0; i < 3; i++)
+        {
+            kaidan[i].SetActive(false);
+        }
         hitFlag = false;
     }
 
@@ -34,7 +48,7 @@ public class kaidanAnime : MonoBehaviour
         {
             for (int i = 0; i < 3; i++)
             {
-                kaidan[i].transform.position = Vector3.MoveTowards(kaidan[i].transform.position, target[i], step * Time.deltaTime);
+                kaidan[i].transform.position = Vector3.MoveTowards(kaidan[i].transform.position, target[i], (step + i * 3) * Time.deltaTime);
             }
         }
 
@@ -42,7 +56,7 @@ public class kaidanAnime : MonoBehaviour
         {
             for (int i = 0; i < 3; i++)
             {
-                kaidan[i].transform.position = Vector3.MoveTowards(kaidan[i].transform.position, StartPos[i], step * Time.deltaTime);
+                kaidan[i].transform.position = Vector3.MoveTowards(kaidan[i].transform.position, StartPos[i], (step + i * 3) * Time.deltaTime);
             }
         }
     }

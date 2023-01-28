@@ -35,8 +35,9 @@ public class Tutorial : MonoBehaviour
     [SerializeField] GameObject _particle;
     private void Start()
     {
-        PlayerMove p = GameObject.Find("player").GetComponent<PlayerMove>();
+        PlayerMove p = GameObject.Find("Majo").GetComponent<PlayerMove>();
         if (p != null) _player = p.GetComponent<PlayerMove>();
+
     }
 
     // Update is called once per frame

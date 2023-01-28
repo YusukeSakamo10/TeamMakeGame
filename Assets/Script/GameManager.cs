@@ -86,7 +86,10 @@ public class GameManager : MonoBehaviour
         moveCount++;
 
         int tmp = maxMoveCount - moveCount;
+        if (tmp < 3) _moveText.color = Color.red;
+        else _moveText.color = Color.white;
         _moveText.text = tmp.ToString("000");
+
     }
 
     public void SceneReset()

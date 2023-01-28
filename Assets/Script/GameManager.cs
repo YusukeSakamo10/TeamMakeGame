@@ -108,5 +108,7 @@ public class GameManager : MonoBehaviour
         if (nextScene == "turtorial") { _clearFlag[0] = true; }
         if (nextScene == "stage1") { _clearFlag[1] = true; }
         if (nextScene == "stage2") { _clearFlag[2] = true; }
+        if (nextScene == "stage3") { _clearFlag[3] = true; }
+        if (nextScene == "stage4") { _clearFlag[4] = true; }
     }
 }

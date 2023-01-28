@@ -6197,7 +6197,14 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _moveText: {fileID: 0}
+  stageName: stage2
   _vCam: []
+  Light:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!4 &1094906422
 Transform:
   m_ObjectHideFlags: 0

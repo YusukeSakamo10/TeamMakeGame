@@ -1186,7 +1186,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 260103158}
-  m_LocalRotation: {x: 0.3826811, y: -0.0031963738, z: 0.0013239811, w: 0.923874}
+  m_LocalRotation: {x: 0.38268107, y: -0.003196401, z: 0.0013239923, w: 0.923874}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -6368,7 +6368,14 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _moveText: {fileID: 0}
+  stageName: stage5
   _vCam:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  Light:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -7525,7 +7532,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1302064952}
-  m_LocalRotation: {x: 0.32724726, y: -0.0032692582, z: 0.0011322034, w: 0.9449324}
+  m_LocalRotation: {x: 0.32724726, y: -0.0032692582, z: 0.0011322035, w: 0.9449324}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

@@ -231,6 +231,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _moveText: {fileID: 969520869}
+  stageName: turtorial
   _vCam:
   - {fileID: 0}
   - {fileID: 0}

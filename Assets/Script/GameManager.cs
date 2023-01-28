@@ -24,8 +24,10 @@ public class GameManager : MonoBehaviour
     GameObject _moveObject;
 
     static bool[] _clearFlag = {false,false,false,false,false };
+    [SerializeField] string stageName = "";
 
     [SerializeField] CinemachineVirtualCamera[] _vCam = {null, null, null, null, null };
+    [SerializeField] GameObject[] Light = { null, null, null, null, null };
     int cameraTime = 60;
     int cameraMaxTime = 60;
 
@@ -43,6 +45,17 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        if (stageName == "stageSelect")
+        {
+            cameraTime = cameraMaxTime;
+            for (int i = 0; i < 5; i++)
+            {
+                if (_clearFlag[i])
+                {
+                    _vCam[i].Priority = 100;
+                }
+            }
+        }
         moveCount = 0;
 
         _moveObject = GameObject.Find("MoveText");
@@ -52,21 +65,19 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        for (int i = 0; i < 5; i++)
+        if (stageName == "stageSelect")
         {
-            if (_clearFlag[i])
+            if (cameraTime > 0) { cameraTime--; }
+            for (int i = 0; i < 5; i++)
             {
-                cameraTime--;
-                _vCam[i].Priority = 100;
-                if (cameraTime < 0)
+                if (cameraTime <= 0)
                 {
+                    Light[i].SetActive(true);
                     _vCam[i].Priority = 0;
                     _clearFlag[i] = false;
-                    cameraTime = cameraMaxTime;
                 }
             }
         }
-
         if (Input.GetKeyDown(KeyCode.Space))
         {
             _onJump.Invoke();
@@ -103,12 +114,12 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(nextScene);
     }
 
-    public void ClearFlag(string nextScene)
+    public void ClearFlag(string clear)
     {
-        if (nextScene == "turtorial") { _clearFlag[0] = true; }
-        if (nextScene == "stage1") { _clearFlag[1] = true; }
-        if (nextScene == "stage2") { _clearFlag[2] = true; }
-        if (nextScene == "stage3") { _clearFlag[3] = true; }
-        if (nextScene == "stage4") { _clearFlag[4] = true; }
+        if (clear == "turtorial") { _clearFlag[0] = true; }
+        if (clear == "stage1") { _clearFlag[1] = true; }
+        if (clear == "stage2") { _clearFlag[2] = true; }
+        if (clear == "stage3") { _clearFlag[3] = true; }
+        if (clear == "stage4") { _clearFlag[4] = true; }
     }
 }

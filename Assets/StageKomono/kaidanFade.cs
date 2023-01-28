@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class kaidanFade : MonoBehaviour
 {
-    [SerializeField] MeshRenderer renderer;
+    [SerializeField] MeshRenderer rendererK;
     kaidanAnime kaidanM;
     // Start is called before the first frame update
     void Start()
     {
         kaidanM = GameObject.Find("kaidanCollider").GetComponent<kaidanAnime>();
-        renderer = GetComponent<MeshRenderer>();
+        rendererK = GetComponent<MeshRenderer>();
     }
 
     private void Update()
@@ -33,7 +33,7 @@ public class kaidanFade : MonoBehaviour
     {
        for (int i = 0; i < 255; i++)
        {
-           renderer.material.color = renderer.material.color - new Color32(0, 0, 0, 1);
+            rendererK.material.color = rendererK.material.color - new Color32(0, 0, 0, 1);
            yield return new WaitForSeconds(0.1f);
        }
     }
@@ -42,7 +42,7 @@ public class kaidanFade : MonoBehaviour
     {
        for (int i = 0; i < 255; i++)
        {
-           renderer.material.color = renderer.material.color + new Color32(0, 0, 0, 1);
+            rendererK.material.color = rendererK.material.color + new Color32(0, 0, 0, 1);
            yield return new WaitForSeconds(0.1f);
        }
     }

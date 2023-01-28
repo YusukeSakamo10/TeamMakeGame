@@ -30,7 +30,7 @@ public class GoalContoroller : MonoBehaviour
         {
             GetComponent<AudioSource>().Play();
             GoalText.SetActive(true);
-            ChaneScene.SetActive(true);
+            //ChaneScene.SetActive(true);
         }
     }
 }

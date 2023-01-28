@@ -1208,7 +1208,7 @@ GameObject:
   - component: {fileID: 261891203}
   - component: {fileID: 261891207}
   - component: {fileID: 261891206}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pivot
   m_TagString: Pivot
   m_Icon: {fileID: 0}

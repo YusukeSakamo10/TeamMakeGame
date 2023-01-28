@@ -21,10 +21,14 @@ public class MoveObjMagic : MonoBehaviour
     bool isStart = false;
     GameManager _gameManager;
     Transform _preBlockTrans;
+    cameraChange _camera;
+
     void Start()
     {
-        //プレイヤーを探して受け取る
-        PlayerMove p = GameObject.Find("Majo").GetComponent<PlayerMove>();
+        cameraChange c = GameObject.Find("GameManager").GetComponent<cameraChange>();
+        if (c != null) _camera = c;
+         //プレイヤーを探して受け取る
+         PlayerMove p = GameObject.Find("Majo").GetComponent<PlayerMove>();
         if (p != null) _Player = p.GetComponent<PlayerMove>();
 
         //キャンセルボタンを保存する
@@ -59,64 +63,66 @@ public class MoveObjMagic : MonoBehaviour
         RaycastHit hit;
         Debug.DrawRay(Camera.main.transform.position, ray.direction * rayDist, Color.green);
 
-        if (Physics.Raycast(ray, out hit, rayDist, _layerMask) && _gameManager.MoveCountValue != _gameManager.MaxMoveCount)
+        if (_Player.IsGround && !_camera.IshukanCamera)
         {
-            //当たったオブジェクトから
-            //オブジェクトの座標系を保存
-            Transform o = hit.collider.gameObject.GetComponent<Transform>();
-            //ついてるギミック関数を受け取る
-            Gimmick g = hit.collider.gameObject.GetComponent<Gimmick>();
-
-            //オブジェクトを動かす関数を受け取る
-            CubeController _cube = hit.collider.gameObject.GetComponent<CubeController>();
-            //　↑　これ選択されたときに入れたほうがいいんじゃない？ 物によって？
-
-            
-            if (g)
+            if (Physics.Raycast(ray, out hit, rayDist, _layerMask) && _gameManager.MoveCountValue != _gameManager.MaxMoveCount)
             {
-                //オブジェクトが選択されていなければいろを変える
-                if (!_saveCube) g.ChangeColor();
+                //当たったオブジェクトから
+                //オブジェクトの座標系を保存
+                Transform o = hit.collider.gameObject.GetComponent<Transform>();
+                //ついてるギミック関数を受け取る
+                Gimmick g = hit.collider.gameObject.GetComponent<Gimmick>();
 
-                //　マウスの左クリックで撃つ
-                if (Input.GetMouseButtonDown(0) && !_saveCube)
+                //オブジェクトを動かす関数を受け取る
+                CubeController _cube = hit.collider.gameObject.GetComponent<CubeController>();
+                //　↑　これ選択されたときに入れたほうがいいんじゃない？ 物によって？
+
+
+                if (g)
                 {
-                    //プレイヤーが動かないように
-                    _Player.IsMove = false;
+                    //オブジェクトが選択されていなければいろを変える
+                    if (!_saveCube) g.ChangeColor();
 
-                    //消してもいいと思うけど
-                    //仮に選択されたオブジェクトがまだあれば消す関数を実施
-                    if (_saveCube) ObjFocusCameraClear();
-                    //矢印をオブジェクトが選択されたときのみ描画
-                    if (_arrowKey) StateChangeButton(true);
-                    //ピポットにトランスフォームを送る
-                    pivot._EndTrans = _cube.transform;
+                    //　マウスの左クリックで撃つ
+                    if (Input.GetMouseButtonDown(0) && !_saveCube)
+                    {
+                        //プレイヤーが動かないように
+                        _Player.IsMove = false;
 
-                    //オブジェクトに対する
-                    g.IsSelect = true;
-                    //キャンセルボタンに、選択されたオブジェクトのギミックコンポーネントより
-                    //キャンセルされたら呼ぶ関数を割り当てる
-                    if (_cancelButton) _cancelButton.onClick.AddListener(g.SelectCancel);
-                    //撮る対象をオブジェクトを撮るカメラに割り当てる
-                    obj.SelectObj = g.gameObject;
-                    //動かす用のクラスのほうに選択されたことを伝える
-                    _cube.IsSelect = true;
-                    //オブジェクト周りの動く際の当たり判定オンにする
-                    _cube.SetPosChildBox();
-                    //選択されたオブジェクトを一時このクラス内に保管する
-                    _saveCube = _cube;
-                    //前のオブジェクトと今のオブジェクトが同じだったら
-                    _cube.Back(_preBlockTrans == _saveCube.transform);
+                        //消してもいいと思うけど
+                        //仮に選択されたオブジェクトがまだあれば消す関数を実施
+                        if (_saveCube) ObjFocusCameraClear();
+                        //矢印をオブジェクトが選択されたときのみ描画
+                        if (_arrowKey) StateChangeButton(true);
+                        //ピポットにトランスフォームを送る
+                        pivot._EndTrans = _cube.transform;
 
-                    //矢印にオブジェクトごとの操作を割り当てる
-                    if (_Up) _Up.onClick.AddListener(_cube.Forward);
-                    if (_Down) _Down.onClick.AddListener(_cube.Backward);
-                    if (_Right) _Right.onClick.AddListener(_cube.Right);
-                    if (_Left) _Left.onClick.AddListener(_cube.Left);
+                        //オブジェクトに対する
+                        g.IsSelect = true;
+                        //キャンセルボタンに、選択されたオブジェクトのギミックコンポーネントより
+                        //キャンセルされたら呼ぶ関数を割り当てる
+                        if (_cancelButton) _cancelButton.onClick.AddListener(g.SelectCancel);
+                        //撮る対象をオブジェクトを撮るカメラに割り当てる
+                        obj.SelectObj = g.gameObject;
+                        //動かす用のクラスのほうに選択されたことを伝える
+                        _cube.IsSelect = true;
+                        //オブジェクト周りの動く際の当たり判定オンにする
+                        _cube.SetPosChildBox();
+                        //選択されたオブジェクトを一時このクラス内に保管する
+                        _saveCube = _cube;
+                        //前のオブジェクトと今のオブジェクトが同じだったら
+                        _cube.Back(_preBlockTrans == _saveCube.transform);
 
+                        //矢印にオブジェクトごとの操作を割り当てる
+                        if (_Up) _Up.onClick.AddListener(_cube.Forward);
+                        if (_Down) _Down.onClick.AddListener(_cube.Backward);
+                        if (_Right) _Right.onClick.AddListener(_cube.Right);
+                        if (_Left) _Left.onClick.AddListener(_cube.Left);
+
+                    }
                 }
             }
         }
-
     }
     /// <summary>
     /// オブジェクトに対するカメラを解除する

@@ -16,20 +16,17 @@ public class CameraControll : MonoBehaviour
         if (Input.GetKey(KeyCode.D)) { return 0; }
         else if (Input.GetKey(KeyCode.A)) { return 0; }
         //マウスのX軸方向の移動取得
-        else if (axisName == "Mouse X")
+        
+        if (Input.GetMouseButton(1))
         {
-            if (Input.GetMouseButton(1))
+            if (axisName == "Mouse X")
             {
-                return UnityEngine.Input.GetAxis("Mouse X");
+               return UnityEngine.Input.GetAxis("Mouse X");
             }
-            return 0;
-        }
-        //マウスのY軸方向の取得
-        else if (axisName == "Mouse Y")
-        {
-            if (Input.GetMouseButton(1))
+            //マウスのY軸方向の取得
+            else if (axisName == "Mouse Y")
             {
-                return UnityEngine.Input.GetAxis("Mouse Y");
+               return UnityEngine.Input.GetAxis("Mouse Y");
             }
             return 0;
         }

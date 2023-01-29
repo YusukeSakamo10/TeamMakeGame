@@ -21,12 +21,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Stage24T/Stage2_new.unity
     guid: f21463ba487305045a0e24380c20cd79
   - enabled: 1
-    path: Assets/Scenes/Stage135/Stage3_NEw.unity
+    path: Assets/Scenes/Stage135/Stage5_Kansei.unity
     guid: c129c8a2065b2ff4183ccd4c84b2d9aa
   - enabled: 1
-    path: Assets/Scenes/Stage24T/Stage4_new.unity
+    path: Assets/Scenes/Stage24T/Stage3_Kansei.unity
     guid: de383fc8e15718045873ed54f8ee9811
   - enabled: 1
-    path: Assets/Scenes/Stage135/Stage5_New.unity
+    path: Assets/Scenes/Stage135/Stage4_Kansei.unity
     guid: 9ed1fb169f04c0d4998e386a9a78986e
   m_configObjects: {}

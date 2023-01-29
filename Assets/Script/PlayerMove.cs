@@ -26,9 +26,12 @@ public class PlayerMove : MonoBehaviour
         get { return _isMove; }
         set { _isMove = value; }
     }
+    [SerializeField] GameObject gameManager;
+    PoseControll _pose = null;
 
     void Start()
     {
+        _pose = gameManager.GetComponent<PoseControll>();
         _rb = GetComponent<Rigidbody>();
     }
 
@@ -41,7 +44,7 @@ public class PlayerMove : MonoBehaviour
 
         _power = 8;
 
-        if (_isMove)
+        if (_isMove && !_pose.PoseFlag)
         {
             h = Input.GetAxisRaw("Horizontal");
             v = Input.GetAxisRaw("Vertical");
@@ -61,7 +64,7 @@ public class PlayerMove : MonoBehaviour
         }
         else { _isGround = false; }
 
-        if(_isGround && _isMove)
+        if(_isGround && _isMove && !_pose.PoseFlag)
         {
             if(Input.GetKeyDown(KeyCode.Space))
             {

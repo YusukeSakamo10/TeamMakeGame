@@ -105,6 +105,7 @@ GameObject:
   - component: {fileID: 4765337803831853156}
   - component: {fileID: 8470772723112234945}
   - component: {fileID: 5938785148743760651}
+  - component: {fileID: 4892983541455090723}
   m_Layer: 0
   m_Name: dentyu
   m_TagString: Untagged
@@ -180,3 +181,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4892983541455090723
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5290095483913706206}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.031153627, y: 0.035887524, z: 0.26193592}
+  m_Center: {x: -0.000014062505, y: -0.0000020749872, z: -0.0506865}

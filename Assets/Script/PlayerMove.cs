@@ -73,7 +73,7 @@ public class PlayerMove : MonoBehaviour
         }
         else 
         {
-            _power = 6;
+            _power = 5;
         }
 
         _rb.AddForce((Vector3.forward * v + Vector3.right * h).normalized * _power);

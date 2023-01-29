@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Title.unity
     guid: a3f6776cbb251b04181f00d0329f10c2
   - enabled: 1
-    path: Assets/Scenes/turtorial.unity
+    path: Assets/Scenes/StageKansei/turtorial.unity
     guid: 556f997aebb86a94e99d71057912beef
   - enabled: 1
     path: Assets/Scenes/Bace.unity

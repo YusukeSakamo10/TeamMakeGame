@@ -5356,7 +5356,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &759372167
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5410,7 +5410,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u5DE6\u30AF\u30EA\u30C3\u30AF& \u30C9\u30E9\u30C3\u30B0\uFF1A\u8996\u70B9\u79FB\u52D5"
+  m_Text: "\u53F3\u30AF\u30EA\u30C3\u30AF& \u30C9\u30E9\u30C3\u30B0\uFF1A\u8996\u70B9\u79FB\u52D5"
 --- !u!222 &759372169
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7527,7 +7527,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u672C\u68DA\u306B\u30AB\u30FC\u30BD\u30EB\u3092\u5F53\u3066\u3066\u53F3\u30AF\u30EA\u30C3\u30AF"
+  m_Text: "\u672C\u68DA\u306B\u30AB\u30FC\u30BD\u30EB\u3092\u5F53\u3066\u3066\u5DE6\u30AF\u30EA\u30C3\u30AF"
 --- !u!222 &1092363170
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10666,7 +10666,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1610856925}
-  m_LocalRotation: {x: 0.3825009, y: -0.028535169, z: 0.011819656, w: 0.9234387}
+  m_LocalRotation: {x: 0.38250092, y: -0.028535137, z: 0.011819643, w: 0.9234387}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

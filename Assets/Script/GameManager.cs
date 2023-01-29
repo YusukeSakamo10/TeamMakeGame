@@ -55,7 +55,7 @@ public class GameManager : MonoBehaviour
             if (stageClearName == "stage1") { _vCam[1].Priority = 100; }
             if (stageClearName == "stage2") { _vCam[2].Priority = 100; }
             if (stageClearName == "stage3") { _vCam[3].Priority = 100; }
-            if (stageClearName == "stage4") { _vCam[4].Priority = 100; }
+            if (stageClearName == "stage4") { _vCam[4].Priority = 100; stageClearName = "stage"; }
         }
         moveCount = 0;
 

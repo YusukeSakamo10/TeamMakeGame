@@ -9,14 +9,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Title.unity
     guid: a3f6776cbb251b04181f00d0329f10c2
   - enabled: 1
-    path: Assets/Scenes/Bace.unity
-    guid: d85150225c84482468321bcb4e4adf79
-  - enabled: 1
     path: Assets/Scenes/turtorial.unity
     guid: 556f997aebb86a94e99d71057912beef
   - enabled: 1
-    path: Assets/Scenes/Stage_Rec.unity
-    guid: fa8fb9b98bb554a47ad29d655f9ee371
+    path: Assets/Scenes/Bace.unity
+    guid: d85150225c84482468321bcb4e4adf79
   - enabled: 1
     path: Assets/Scenes/Stage135/Stage1_NEW.unity
     guid: 109e5e057a0112b4997967ae983de83f

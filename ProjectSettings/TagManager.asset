@@ -14,6 +14,9 @@ TagManager:
   - Enemy
   - Goal
   - Stone
+  - dentyu
+  - stage
+  - Object
   layers:
   - Default
   - TransparentFX

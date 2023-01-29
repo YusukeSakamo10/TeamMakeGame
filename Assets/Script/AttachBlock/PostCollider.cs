@@ -62,7 +62,7 @@ public class PostCollider : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if(other.gameObject.tag == "Player" || other.gameObject.tag == "Block" || other.gameObject.tag == "Goal" || other.gameObject.tag == "Stone")
+        if(other.gameObject.tag == "Player" || other.gameObject.tag == "Block" || other.gameObject.tag == "Goal" || other.gameObject.tag == "Stone" || other.gameObject.tag == "dentyu"|| other.gameObject.tag == "stage" || other.gameObject.tag == "Object")
         {
             if (_isMoved)
             {
@@ -72,7 +72,7 @@ public class PostCollider : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "Player" || other.gameObject.tag == "Block" || other.gameObject.tag == "Goal" || other.gameObject.tag == "Stone")
+        if (other.gameObject.tag == "Player" || other.gameObject.tag == "Block" || other.gameObject.tag == "Goal" || other.gameObject.tag == "Stone" || other.gameObject.tag == "dentyu" || other.gameObject.tag == "stage" || other.gameObject.tag == "Object")
         {
             _isHit = false;
         }

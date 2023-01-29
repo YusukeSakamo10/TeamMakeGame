@@ -43,6 +43,7 @@ public class Tutorial : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //ステージギミックの初期化
         if (blackTimer > 0) 
         {
             for (int i = 0; i < 6; i++)
@@ -53,21 +54,25 @@ public class Tutorial : MonoBehaviour
             blackTimer--; 
         }
 
+        //１フェーズが終わったらテキストを切り替える
         _WASDText.SetActive(faze1flag);
         _JumpText.SetActive(faze1flag);
 
+        //WASDを押すまでこの処理に入る
         if (!WASDflag)
         {
+            //押したらチェックをつける
             if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
             {
-                Debug.Log("QAAAAAAA");
                 WASDflag = true;
                 _Check[1].SetActive(true);
             }
         }
 
+        //ジャンプするまで
         if (!JumpFlag)
         {
+            //ジャンプしたらチェックをつける
             if (Input.GetKey(KeyCode.Space))
             {
                 JumpFlag = true;
@@ -79,12 +84,14 @@ public class Tutorial : MonoBehaviour
             _particle.SetActive(false);
         }
 
+        //フェーズ２の時左クリックを押したらチェックをつける
         if(faze2flag && Input.GetMouseButtonDown(1))
         {
             _Check[2].SetActive(true);
         }
 
-        if(faze2flag && _player.transform.position.z < -18)
+        //フェーズ２の時プレイヤーの位置がブロックに近づいたとき
+        if (faze2flag && _player.transform.position.z < 2.5)
         {
             faze2flag = false;
             faze3flag = true;
@@ -129,26 +136,33 @@ public class Tutorial : MonoBehaviour
         }
     }
 
+    //パーティクル（チュートリアルマネージャーに触れたら）
     private void OnTriggerEnter(Collider other)
     {
+        //フェーズ１のフラグが全部立っていたら
         if(WASDflag && JumpFlag && faze1flag)
         {
+            //チェックボックスの切り替え
             for(int i = 1; i < 3; i++)
             {
                 _Check[i].SetActive(false);
                 _CheckBox[i].SetActive(false);
             }
 
+            //オブジェクトを出現させる
             for(int i = 0; i < 6;i++)
             {
                 _Object[i].SetActive(true);
             }
 
+            //緑のパネルの切り替え
             _Panel[0].SetActive(false);
             _Panel[1].SetActive(true);
 
+            //フェーズの切り替え
             faze1flag = false;
             faze2flag = true;
+            //フェーズ２のテキスト表示
             _DragText.SetActive(true);
             _CheckBox[2].SetActive(true);
         }

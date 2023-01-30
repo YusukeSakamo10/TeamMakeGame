@@ -6590,7 +6590,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 260103158}
-  m_LocalRotation: {x: 0.3826811, y: -0.0031963738, z: 0.0013239811, w: 0.923874}
+  m_LocalRotation: {x: 0.38268107, y: -0.003196401, z: 0.0013239923, w: 0.923874}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -13032,6 +13032,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P select
       objectReference: {fileID: 0}
+    - target: {fileID: 145834429897805251, guid: 8080981c8c889e74f8b453f500510533, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4867258416747270984, guid: 8080981c8c889e74f8b453f500510533, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -13678,7 +13682,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1202345200}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.5754027, y: 8.01, z: -40.959885}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -14654,7 +14658,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1302064952}
-  m_LocalRotation: {x: 0.32724726, y: -0.0032692582, z: 0.0011322035, w: 0.9449324}
+  m_LocalRotation: {x: 0.32724726, y: -0.0032692582, z: 0.0011322034, w: 0.9449324}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -16528,7 +16532,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1583963970}
-  m_LocalRotation: {x: 0.2722252, y: -0.0033291115, z: 0.000941844, w: 0.9622274}
+  m_LocalRotation: {x: 0.2722252, y: -0.0033290784, z: 0.0009418346, w: 0.9622274}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -17443,7 +17447,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u52D5\u304B\u3057\u305F\u672C\u68DA\u3092\u5143\u3042\u3063\u305F\u65B9\u5411\u306B\u3000\u3000\u52D5\u304B\u3059\u3068\u56DE\u6570\u304C\u6E1B\u3089\u306A\u3044\u3088\uFF01"
+  m_Text: "\u30D2\u30F3\u30C8\u3070\u3063\u304B\u308A\u898B\u306A\u3044\u3067\uFF01"
 --- !u!222 &1713725868
 CanvasRenderer:
   m_ObjectHideFlags: 0

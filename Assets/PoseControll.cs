@@ -22,18 +22,20 @@ public class PoseControll : MonoBehaviour
     public void Pose()
     {
         _poseFlag = !_poseFlag;
+        honPanel.SetActive(_poseFlag);
+
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        if(_poseFlag)
-        {
-            honPanel.SetActive(true);
-        }
-        else
-        {
-            honPanel.SetActive(false); ;
-        }
-    }
+    //void Update()
+    //{
+    //    if(_poseFlag)
+    //    {
+    //        honPanel.SetActive(true);
+    //    }
+    //    else
+    //    {
+    //        honPanel.SetActive(false); ;
+    //    }
+    //}
 }

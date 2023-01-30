@@ -12844,9 +12844,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 1844763252}
     m_Modifications:
     - target: {fileID: 7894569233827400785, guid: 1e8b3a8f4003dba4ba9ac7e2f8f606ac, type: 3}
+      propertyPath: _power
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894569233827400785, guid: 1e8b3a8f4003dba4ba9ac7e2f8f606ac, type: 3}
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 1094906419}
+    - target: {fileID: 7894569233827400785, guid: 1e8b3a8f4003dba4ba9ac7e2f8f606ac, type: 3}
+      propertyPath: InitialPower
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7894569233827400786, guid: 1e8b3a8f4003dba4ba9ac7e2f8f606ac, type: 3}
       propertyPath: m_RootOrder
       value: 0

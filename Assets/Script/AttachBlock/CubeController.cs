@@ -63,7 +63,7 @@ public class CubeController : MonoBehaviour
             target = transform.position + dir * distance;
             _GameManager.MoveCount();
             //移動回数を記録して前の位置を更新のタイミングを確認
-            _resetPrePos += 1;
+            //_resetPrePos += 1;
 
         }
     }
@@ -78,7 +78,7 @@ public class CubeController : MonoBehaviour
             target = transform.position + dir * distance;
             _GameManager.MoveCount();
             //移動回数を記録して前の位置を更新のタイミングを確認
-            _resetPrePos += 1;
+            //_resetPrePos += 1;
         }
     }
     public void Left()
@@ -92,7 +92,7 @@ public class CubeController : MonoBehaviour
             target = transform.position + dir * distance;
             _GameManager.MoveCount();
             //移動回数を記録して前の位置を更新のタイミングを確認
-            _resetPrePos += 1;
+            //_resetPrePos += 1;
         }
     }
     public void Right()
@@ -106,7 +106,7 @@ public class CubeController : MonoBehaviour
             target = transform.position + dir * distance;
             _GameManager.MoveCount();
             //移動回数を記録して前の位置を更新のタイミングを確認
-            _resetPrePos += 1;
+            //_resetPrePos += 1;
         }
     }
 

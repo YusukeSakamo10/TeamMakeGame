@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     public float _power = 8;
+    public float InitialPower;
+    public float JumpNowPower = 5;
     public Rigidbody _rb;
     float h;
     float v;
@@ -31,6 +33,7 @@ public class PlayerMove : MonoBehaviour
 
     void Start()
     {
+        InitialPower = _power;
         _pose = gameManager.GetComponent<PoseControll>();
         _rb = GetComponent<Rigidbody>();
     }
@@ -41,8 +44,6 @@ public class PlayerMove : MonoBehaviour
         {
             Application.Quit();
         }
-
-        _power = 8;
 
         if (_isMove && !_pose.PoseFlag)
         {
@@ -70,10 +71,11 @@ public class PlayerMove : MonoBehaviour
             {
                _rb.AddForce(Vector3.up * _jumpPower,ForceMode.Impulse);
             }
+            _power = InitialPower;
         }
         else 
         {
-            _power = 5;
+            _power = JumpNowPower;
         }
 
         _rb.AddForce((Vector3.forward * v + Vector3.right * h).normalized * _power);

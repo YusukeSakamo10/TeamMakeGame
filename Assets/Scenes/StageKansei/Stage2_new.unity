@@ -1822,7 +1822,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 260103158}
-  m_LocalRotation: {x: 0.38263908, y: -0.014078593, z: 0.005831545, w: 0.9237723}
+  m_LocalRotation: {x: 0.38263908, y: -0.014078548, z: 0.005831526, w: 0.9237723}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -12807,6 +12807,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P select
       objectReference: {fileID: 0}
+    - target: {fileID: 145834429897805251, guid: 8080981c8c889e74f8b453f500510533, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4867258416747270984, guid: 8080981c8c889e74f8b453f500510533, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -13676,7 +13680,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1202345200}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.4576325, y: 8.01, z: -40.95768}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -17932,7 +17936,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u52D5\u304B\u3057\u305F\u672C\u68DA\u3092\u5143\u3042\u3063\u305F\u65B9\u5411\u306B\u3000\u3000\u52D5\u304B\u3059\u3068\u56DE\u6570\u304C\u6E1B\u3089\u306A\u3044\u3088\uFF01"
+  m_Text: "\u8272\u3093\u306A\u65B9\u6CD5\u3092\u8A66\u3057\u3066\u307F\u3066\uFF01"
 --- !u!222 &1743254040
 CanvasRenderer:
   m_ObjectHideFlags: 0

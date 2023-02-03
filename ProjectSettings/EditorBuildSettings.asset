@@ -6,27 +6,27 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Title.unity
+    path: Assets/Scenes/StageKansei/Title.unity
     guid: a3f6776cbb251b04181f00d0329f10c2
   - enabled: 1
     path: Assets/Scenes/StageKansei/turtorial.unity
     guid: 556f997aebb86a94e99d71057912beef
   - enabled: 1
-    path: Assets/Scenes/Bace.unity
+    path: Assets/Scenes/StageKansei/Bace.unity
     guid: d85150225c84482468321bcb4e4adf79
   - enabled: 1
-    path: Assets/Scenes/Stage135/Stage1_NEW.unity
+    path: Assets/Scenes/StageKansei/Stage1_NEW.unity
     guid: 109e5e057a0112b4997967ae983de83f
   - enabled: 1
     path: Assets/Scenes/StageKansei/Stage2_new.unity
     guid: f21463ba487305045a0e24380c20cd79
   - enabled: 1
-    path: Assets/Scenes/Stage135/Stage5_Kansei.unity
+    path: Assets/Scenes/StageKansei/Stage5_Kansei.unity
     guid: c129c8a2065b2ff4183ccd4c84b2d9aa
   - enabled: 1
-    path: Assets/Scenes/Stage24T/Stage3_Kansei.unity
+    path: Assets/Scenes/StageKansei/Stage3_Kansei.unity
     guid: de383fc8e15718045873ed54f8ee9811
   - enabled: 1
-    path: Assets/Scenes/Stage135/Stage4_Kansei.unity
+    path: Assets/Scenes/StageKansei/Stage4_Kansei.unity
     guid: 9ed1fb169f04c0d4998e386a9a78986e
   m_configObjects: {}

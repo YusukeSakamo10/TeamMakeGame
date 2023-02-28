@@ -7,11 +7,11 @@ public class GoalContoroller : MonoBehaviour
 {
     public GameObject GoalText;
     public GameObject ChaneScene;
-
+    private bool _isGoal = false;
     // Use this for initialization
     void Start()
     {
-
+        _isGoal = false;
         GoalText.SetActive(false);
 
     }
@@ -28,7 +28,11 @@ public class GoalContoroller : MonoBehaviour
     {
         if (collider.gameObject.tag == "Player")
         {
-            GetComponent<AudioSource>().Play();
+            if (!_isGoal) {
+                GetComponent<AudioSource>().Play(); 
+                _isGoal=true;
+            }
+           
             GoalText.SetActive(true);
             //ChaneScene.SetActive(true);
         }

@@ -6,7 +6,7 @@ using Cinemachine;
 
 public class GameManager : MonoBehaviour
 {
-    int moveCount = 0;
+    [SerializeField] int moveCount = 0;
     [SerializeField] int maxMoveCount = 3;
 
     [Tooltip("jump‚µ‚½‚ÉŒÄ‚Ño‚·ˆ—")]

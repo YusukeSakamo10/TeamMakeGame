@@ -65,6 +65,11 @@ public class MoveObjMagic : MonoBehaviour
 
         if (_Player.IsGround && !_camera.IshukanCamera)
         {
+            if (Physics.Raycast(ray, out hit, rayDist, _layerMask) && _gameManager.MoveCountValue == _gameManager.MaxMoveCount && Input.GetMouseButtonDown(0))
+            {
+               GetComponent<AudioSource>().Play();
+            }
+
             if (Physics.Raycast(ray, out hit, rayDist, _layerMask) && _gameManager.MoveCountValue != _gameManager.MaxMoveCount)
             {
                 //当たったオブジェクトから

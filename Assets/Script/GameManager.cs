@@ -23,13 +23,24 @@ public class GameManager : MonoBehaviour
     /// <summary>残り移動回数を表示するための GameObject</summary>
     GameObject _moveObject;
 
-    static bool[] _clearFlag = {false,false,false,false,false };
+    static bool[] _clearFlag = { false, false, false, false, false, false };
     [SerializeField] string stageName = "";
-    static bool[] lightFlag = { false,false,false,false,false };
+    static bool[] lightFlag = { false, false, false, false, false };
     static string stageClearName;
 
-    [SerializeField] CinemachineVirtualCamera[] _vCam = {null, null, null, null, null };
+    [SerializeField] CinemachineVirtualCamera[] _vCam = { null, null, null, null, null };
     [SerializeField] GameObject[] Light = { null, null, null, null, null };
+
+    //それぞれのステージクリア後、初期化するプレイヤーの位置
+    [SerializeField] float[] InitPosX;
+    [SerializeField] float[] InitPosY;
+    [SerializeField] float[] InitPosZ;
+    //位置変数セットするために　プレイヤー取得用
+    [SerializeReference] public GameObject player;
+
+    //前回クリアしたステージ
+    static int preStage;
+
     int cameraTime = 60;
     int cameraMaxTime = 60;
 
@@ -50,8 +61,8 @@ public class GameManager : MonoBehaviour
         if (stageName == "stageSelect")
         {
             cameraTime = cameraMaxTime;
-            
-            if(stageClearName == "turtorial"){_vCam[0].Priority = 100;}
+
+            if (stageClearName == "turtorial") { _vCam[0].Priority = 100; }
             if (stageClearName == "stage1") { _vCam[1].Priority = 100; }
             if (stageClearName == "stage2") { _vCam[2].Priority = 100; }
             if (stageClearName == "stage3") { _vCam[3].Priority = 100; }
@@ -61,7 +72,17 @@ public class GameManager : MonoBehaviour
 
         _moveObject = GameObject.Find("MoveText");
         _moveText = _moveObject.GetComponent<Text>();
-       _moveText.text = string.Format("{0:000}", maxMoveCount);
+        _moveText.text = string.Format("{0:000}", maxMoveCount);
+
+
+        //前回クリアしたステージを参照して予め用意しておいた位置変数を代入
+        for (int i = 0; i < 6; i++)
+        {
+            if (preStage == i)
+            {
+                player.gameObject.transform.position = new Vector3(InitPosX[i], InitPosY[i], InitPosZ[i]);
+            }
+        }
     }
 
     private void Update()
@@ -87,7 +108,7 @@ public class GameManager : MonoBehaviour
         }
 
         if (Input.GetButtonDown("Fire1"))
-        { 
+        {
             _onShoot.Invoke();
         }
 
@@ -119,10 +140,18 @@ public class GameManager : MonoBehaviour
 
     public void ClearFlag(string clear)
     {
-        if (clear == "turtorial") { _clearFlag[0] = true; stageClearName = "turtorial"; }
-        if (clear == "stage1") { _clearFlag[1] = true; stageClearName = "stage1"; }
-        if (clear == "stage2") { _clearFlag[2] = true; stageClearName = "stage2"; }
-        if (clear == "stage3") { _clearFlag[3] = true; stageClearName = "stage3"; }
-        if (clear == "stage4") { _clearFlag[4] = true; stageClearName = "stage4"; }
+        if (clear == "turtorial") { _clearFlag[0] = true; stageClearName = "turtorial"; preStage = 0; }
+        if (clear == "stage1") { _clearFlag[1] = true; stageClearName = "stage1"; preStage = 1; }
+        if (clear == "stage2") { _clearFlag[2] = true; stageClearName = "stage2"; preStage = 2; }
+        if (clear == "stage3") { _clearFlag[3] = true; stageClearName = "stage3"; preStage = 3; }
+        if (clear == "stage4") { _clearFlag[4] = true; stageClearName = "stage4"; preStage = 4; }
+        if (clear == "stage5") { _clearFlag[5] = true; stageClearName = "stage5"; preStage = 5; }
+
+    }
+
+    public void InitPos(string clear)
+    {
+        if (clear == "stage2") { player.gameObject.transform.position = Vector3.zero; }
+
     }
 }

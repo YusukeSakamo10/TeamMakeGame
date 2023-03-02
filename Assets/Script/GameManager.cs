@@ -35,9 +35,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] float[] InitPosX;
     [SerializeField] float[] InitPosY;
     [SerializeField] float[] InitPosZ;
-    //位置変数セットするために　プレイヤー取得用
-    [SerializeReference] public GameObject player;
-
+   
     //前回クリアしたステージ
     static int preStage;
 
@@ -74,15 +72,9 @@ public class GameManager : MonoBehaviour
         _moveText = _moveObject.GetComponent<Text>();
         _moveText.text = string.Format("{0:000}", maxMoveCount);
 
-
-        //前回クリアしたステージを参照して予め用意しておいた位置変数を代入
-        for (int i = 0; i < 6; i++)
-        {
-            if (preStage == i)
-            {
-                player.gameObject.transform.position = new Vector3(InitPosX[i], InitPosY[i], InitPosZ[i]);
-            }
-        }
+        //プレイヤーの位置の初期化
+        InitPos();
+        
     }
 
     private void Update()
@@ -149,9 +141,22 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void InitPos(string clear)
+    //プレイヤーの位置の初期化
+    private void InitPos()
     {
-        if (clear == "stage2") { player.gameObject.transform.position = Vector3.zero; }
+        if (SceneManager.GetActiveScene().name == "Bace")
+        {
+            //位置変数セットするために　プレイヤー取得用
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
 
+            //前回クリアしたステージを参照して予め用意しておいた位置変数を代入
+            for (int i = 0; i < 6; i++)
+            {
+                if (preStage == i)
+                {
+                    player.gameObject.transform.position = new Vector3(InitPosX[i], InitPosY[i], InitPosZ[i]);
+                }
+            }
+        }
     }
 }

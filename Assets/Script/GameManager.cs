@@ -32,10 +32,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject[] Light = { null, null, null, null, null };
 
     //それぞれのステージクリア後、初期化するプレイヤーの位置
-    [SerializeField] float[] InitPosX;
-    [SerializeField] float[] InitPosY;
-    [SerializeField] float[] InitPosZ;
-   
+    static float[] InitPosX = { -4, -4, -13, 1, -47, 47 };
+    static float[] InitPosY = { 3, 3, 25, 25, 25, 25 };
+    static float[] InitPosZ = { -48, -15, 53, 53, 0, 0 };
+
+    [SerializeField] GameObject player;
+
     //前回クリアしたステージ
     static int preStage;
 
@@ -74,7 +76,7 @@ public class GameManager : MonoBehaviour
 
         //プレイヤーの位置の初期化
         InitPos();
-        
+
     }
 
     private void Update()
@@ -147,16 +149,24 @@ public class GameManager : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "Bace")
         {
             //位置変数セットするために　プレイヤー取得用
-            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            //GameObject player = GameObject.FindGameObjectWithTag("Player");
 
-            //前回クリアしたステージを参照して予め用意しておいた位置変数を代入
-            for (int i = 0; i < 6; i++)
-            {
-                if (preStage == i)
-                {
-                    player.gameObject.transform.position = new Vector3(InitPosX[i], InitPosY[i], InitPosZ[i]);
-                }
-            }
+            ////前回クリアしたステージを参照して予め用意しておいた位置変数を代入
+            //for (int i = 0; i < 6; i++)
+            //{
+            //    if (preStage == i)
+            //    {
+            //        player.gameObject.transform.position = new Vector3(InitPosX[i], InitPosY[i], InitPosZ[i]);
+            //    }
+            //}
+
+            if (preStage == 0) player.gameObject.transform.position = new Vector3(-4, 3, -48);
+            if (preStage == 1) player.gameObject.transform.position = new Vector3(-4, 3, -15);
+            if (preStage == 2) player.gameObject.transform.position = new Vector3(-13, 25, 53);
+            if (preStage == 3) player.gameObject.transform.position = new Vector3(1, 25, 53);
+            if (preStage == 4) player.gameObject.transform.position = new Vector3(-47, 25, 0);
+            if (preStage == 5) player.gameObject.transform.position = new Vector3(47, 25, 0);
+
         }
     }
 }

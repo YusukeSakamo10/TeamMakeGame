@@ -26096,27 +26096,7 @@ MonoBehaviour:
   - {fileID: 1761278716}
   - {fileID: 671653604}
   - {fileID: 636836289}
-  InitPosX:
-  - -4
-  - -4
-  - -13
-  - 1
-  - -47
-  - 47
-  InitPosY:
-  - 3
-  - 3
-  - 25
-  - 25
-  - 25
-  - 25
-  InitPosZ:
-  - -48
-  - -15
-  - 53
-  - 53
-  - 0
-  - 0
+  player: {fileID: 1398653884}
 --- !u!4 &1094906422
 Transform:
   m_ObjectHideFlags: 0
@@ -33982,6 +33962,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.1683332, y: 0.10017322, z: 0.01588824}
   m_Center: {x: -0.00028365196, y: 0.0005795264, z: 0.0040561985}
+--- !u!1 &1398653884 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7894569233827400787, guid: 1e8b3a8f4003dba4ba9ac7e2f8f606ac, type: 3}
+  m_PrefabInstance: {fileID: 1268590225}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1410945065
 GameObject:
   m_ObjectHideFlags: 0

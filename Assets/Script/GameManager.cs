@@ -58,7 +58,12 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        if (stageName == "stageSelect")
+        if (SceneManager.GetActiveScene().name == "Title")
+        { 
+             { preStage = 0; }
+        }
+
+            if (stageName == "stageSelect")
         {
             cameraTime = cameraMaxTime;
 
